@@ -1,28 +1,27 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Circular_Air-Bold";
+  src: url("./fonts/Circular_Air-Bold.woff"),
+    url("./fonts/Circular_Air-Bold.ttf");
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+@font-face {
+  font-family: "CircularAir";
+  src: url("./fonts/Circular_Air-Book.woff"),
+    url("./fonts/Circular_Air-Book.ttf");
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+@font-face {
+  font-family: "Circular_Air-Light";
+  src: url("./fonts/Circular_Air-Light.woff"),
+    url("./fonts/Circular_Air-Light.ttf");
 }
 
-.App-title {
-  font-size: 1.5em;
+.container {
+  width: 976px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+header {
+  border-bottom: 1px solid #eee;
 }
