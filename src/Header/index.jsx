@@ -3,23 +3,28 @@ import styled from "styled-components";
 import logo from "./logo.svg";
 import shape from "./shape.png";
 import Navigation from "./Navigation";
+import { Grid, Row, Col } from "react-flexbox-grid";
 
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
+  height: 80px;
+  align-items: center;
 `;
 
 const Logo = styled.img`
-  margin-top: 24px;
+  margin-top: 9px;
   height: 32px;
+  width: 32px;
 `;
 
-const SearchBar = styled.input`
-  width: 392px;
+const SearchFrom = styled.form``;
+
+const SearchInput = styled.input`
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   height: 48px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-left: 51px;
-  margin-right: auto;
+  padding-left: 53px;
   background: #ffffff;
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
@@ -28,22 +33,31 @@ const SearchBar = styled.input`
   font-size: 16px;
   color: #383838;
   opacity: 0.64;
-  padding-left: 55px;
   background: url(${shape}) no-repeat 16px 13px;
 `;
 
 export default () => (
-  <header>
-    <Header className="container">
-      <a href="/">
-        <Logo alt="Logo" src={logo} />
-      </a>
-      <SearchBar
-        type="text"
-        name="search"
-        placeholder="Try &quot;Miami&quot;"
-      />
-      <Navigation />
-    </Header>
-  </header>
+  <Header>
+    <div className="container">
+      <Row>
+        <Col lg={1}>
+          <a href="/">
+            <Logo alt="Logo" src={logo} />
+          </a>
+        </Col>
+        <Col lg={5}>
+          <SearchFrom>
+            <SearchInput
+              type="text"
+              name="search"
+              placeholder="Try &quot;Miami&quot;"
+            />
+          </SearchFrom>
+        </Col>
+        <Col lg={6}>
+          <Navigation />
+        </Col>
+      </Row>
+    </div>
+  </Header>
 );

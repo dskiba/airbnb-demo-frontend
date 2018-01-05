@@ -1,10 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-export default () => (
-  <main>
-    <div className="container">
-      <Cards />
-    </div>
-  </main>
-);
+import Explore from "./Explore";
+import Experiences from "./Experiences";
+
+const Main = styled.main``;
+
+export default () => {
+  return (
+    <Main>
+      <div className="container">
+        <Explore />
+        <Experiences />
+      </div>
+    </Main>
+  );
+};

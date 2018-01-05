@@ -2,12 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Navigation = styled.nav`
-  width: 300px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  fonzt-size: 0;
-  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 `;
 
 const LinkList = styled.ul`
@@ -25,7 +23,7 @@ const LinkItem = styled.li`
 
 const Link = styled.a`
   display: inline-block;
-  margin-top: 27px;
+  margin-top: 5px;
   padding: 5px 10px;
   text-decoration: none;
   color: #383838;
