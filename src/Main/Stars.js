@@ -1,29 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import star from "./star.png";
+import star from "./star.svg";
 
-const StarsList = styled.span`
+const Stars = styled.div`
   display: inline-block;
-  margin-right: 0.25rem;
+  margin-right: 8px;
 `;
 
 const Star = styled.span`
   display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  margin-right: 0.25rem;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
   background-image: url(${star});
   background-size: cover;
 `;
 
 export default () => {
   return (
-    <StarsList>
+    <Stars>
       <Star />
       <Star />
       <Star />
       <Star />
       <Star />
-    </StarsList>
+    </Stars>
   );
 };

@@ -17,6 +17,7 @@ export const Card = styled.div``;
 
 export const Link = styled.a`
   display: block;
+  text-decoration: none;
 `;
 
 export const Slider = styled.div``;
@@ -39,9 +40,8 @@ export const SeeAll = styled.a`
   }
 `;
 
-export const Image = styled.img`
-  box-sizing: border-box;
+export const Img = styled.img`
   display: block;
   width: 100%;
-  margin-bottom: 0.75rem;
+  margin-bottom: 8px;
 `;
