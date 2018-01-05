@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import LanguageForm from "./LanguageForm";
 
 const Footer = styled.footer`
   background-color: #fff;
@@ -12,8 +13,9 @@ export default () => {
     <Footer>
       <div className="container">
         <Row>
-          <Col lg={3}>{/* <LanguageFrom />
-            <CurrencyForm /> */}</Col>
+          <Col lg={3}>
+            <LanguageForm />
+          </Col>
         </Row>
       </div>
     </Footer>
