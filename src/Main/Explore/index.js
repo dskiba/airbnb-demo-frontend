@@ -15,9 +15,7 @@ const Card = styled.a`
   display: flex;
   position: relative;
   box-sizing: border-box;
-
   align-items: center;
-
   text-decoration: none;
   height: 72px;
   background: #ffffff;
