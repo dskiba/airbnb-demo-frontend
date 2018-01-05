@@ -11,9 +11,12 @@ import {
   Img
 } from "../styled";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import img1 from "./1.png";
-import img2 from "./2.png";
-import img3 from "./3.png";
+import img1 from "./Paris.png";
+import img2 from "./Miami.png";
+import img3 from "./Tokyo.png";
+import img4 from "./Cape-town.png";
+import img5 from "./Seoul.png";
+import img6 from "./Los-Angeles.png";
 
 const Featured = styled.section``;
 
@@ -23,55 +26,67 @@ const City = CardName.extend`
 
 export default () => {
   return (
-    <Homes>
+    <Featured>
       <Row>
         <Col lg={12}>
           <Title>
-            Homes
+            Featured destinations
             <SeeAll href="/Homes">See all</SeeAll>
           </Title>
         </Col>
       </Row>
       <Slider>
         <Row>
-          <Col lg={4}>
+          <Col lg={2} md={3}>
             <Card>
-              <Link href="/La_Salentina">
-                <Img src={img1} alt="La Salentina" />
-                <CardPrice>$82</CardPrice>
-                <HouseName>La Salentina, see, nature & relax</HouseName>
-                <Description>Entire house · 9 beds</Description>
-                <Stars />
-                <Hosts>97 · Superhost</Hosts>
+              <Link href="/Paris">
+                <Img src={img1} alt="Paris" />
+                <City>Paris</City>
               </Link>
             </Card>
           </Col>
-          <Col lg={4}>
+          <Col lg={2} md={3}>
             <Card>
-              <Link href="/La_Salentina">
-                <Img src={img2} alt="Your private" />
-                <CardPrice>$82</CardPrice>
-                <HouseName>Your private 3 bedr. riad and exclusi…</HouseName>
-                <Description>Entire house · 5 beds</Description>
-                <Stars />
-                <Hosts>161 · Superhost</Hosts>
+              <Link href="/Miami">
+                <Img src={img2} alt="Miami" />
+                <City>Miami</City>
               </Link>
             </Card>
           </Col>
-          <Col lg={4}>
+          <Col lg={2} md={3}>
             <Card>
-              <Link href="/La_Salentina">
-                <Img src={img3} alt="La Salentina" />
-                <CardPrice>$200</CardPrice>
-                <HouseName>Dreamy Tropical Tree House</HouseName>
-                <Description>Entire house · 1 beds</Description>
-                <Stars />
-                <Hosts>364 · Superhost</Hosts>
+              <Link href="/Tokyo">
+                <Img src={img3} alt="Tokyo" />
+                <City>Tokyo</City>
+              </Link>
+            </Card>
+          </Col>
+          <Col lg={2} md={3}>
+            <Card>
+              <Link href="/Cape_town">
+                <Img src={img4} alt="Cape town" />
+                <City>Cape town</City>
+              </Link>
+            </Card>
+          </Col>
+          <Col lg={2} md={3}>
+            <Card>
+              <Link href="/Seoul">
+                <Img src={img5} alt="Seoul" />
+                <City>Seoul</City>
+              </Link>
+            </Card>
+          </Col>
+          <Col lg={2} md={3}>
+            <Card>
+              <Link href="/Los_Angeles">
+                <Img src={img6} alt="Los Angeles" />
+                <City>Los Angeles</City>
               </Link>
             </Card>
           </Col>
         </Row>
       </Slider>
-    </Homes>
+    </Featured>
   );
 };

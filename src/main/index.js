@@ -5,6 +5,7 @@ import Explore from "./Explore";
 import Experiences from "./Experiences";
 import Homes from "./Homes";
 import Resevations from "./Reservations";
+import Featured from "./Featured";
 
 const Main = styled.main``;
 
@@ -16,6 +17,7 @@ export default () => {
         <Experiences />
         <Homes />
         <Resevations />
+        <Featured />
       </div>
     </Main>
   );
