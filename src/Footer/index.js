@@ -32,11 +32,11 @@ export default () => {
     <Footer>
       <div className="container">
         <Row>
-          <Col lg={3}>
+          <Col lg={3} sm={3} xs={6}>
             <LanguageForm />
             <CurrencyForm />
           </Col>
-          <Col lgOffset={1} lg={2}>
+          <Col lgOffset={1} lg={2} smOffset={1} sm={1}>
             <Nav>
               <NavTitle>Airbnb</NavTitle>
               <Link href="/">About us</Link>
@@ -47,7 +47,7 @@ export default () => {
               <Link href="/">Diversity & Belonging</Link>
             </Nav>
           </Col>
-          <Col lgOffset={1} lg={2}>
+          <Col lgOffset={1} lg={2} smOffset={2} sm={2}>
             <Nav>
               <NavTitle>Discover</NavTitle>
               <Link href="/">Trust & Safety</Link>
@@ -59,7 +59,7 @@ export default () => {
               <Link href="/">Airbnbmag</Link>
             </Nav>
           </Col>
-          <Col lgOffset={1} lg={2}>
+          <Col lgOffset={1} lg={2} smOffset={1} sm={2}>
             <Nav>
               <NavTitle>Hosting</NavTitle>
               <Link href="/">Why Host</Link>
@@ -73,13 +73,13 @@ export default () => {
       <SecondFooter>
         <div className="container">
           <Row>
-            <Col lg={2}>
+            <Col lg={2} sm={3}>
               <Copyright href="/">
                 <Logo alt="Logo" src={logo} />
                 © Airbnb Inc.
               </Copyright>
             </Col>
-            <Col lgOffset={6} lg={4}>
+            <Col lgOffset={6} lg={4} sm={6} smOffset={3}>
               <SideNav />
             </Col>
           </Row>

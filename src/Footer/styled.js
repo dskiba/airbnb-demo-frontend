@@ -43,6 +43,7 @@ export const Link = styled.a`
   margin-bottom: 8px;
   color: #636363;
   font-size: 15px;
+
   &:last-child {
     margin-bottom: 48px;
   }
@@ -56,4 +57,5 @@ export const Copyright = styled.a`
   line-height: 18px;
   color: #636363;
   margin-bottom: 35px;
+  word-wrap: normal;
 `;
