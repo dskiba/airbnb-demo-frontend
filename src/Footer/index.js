@@ -15,6 +15,7 @@ const Footer = styled.footer`
 
 const SecondFooter = styled.footer`
   border-top: 1px solid #eee;
+  box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
   padding-top: 34px;
 `;
 
@@ -23,8 +24,8 @@ const Logo = styled.img`
   vertical-align: middle;
   width: 20.5px;
   height: 22px;
-  fill: #dadada;
   margin-right: 12.5px;
+  fill: #dadada;
 `;
 
 export default () => {
@@ -32,18 +33,18 @@ export default () => {
     <Footer>
       <div className="container">
         <Row>
-          <Col lg={3} md={3} xs={12}>
+          <Col xs={12} md={3} lg={3}>
             <Row>
-              <Col lg={12} md={12} xs={6}>
+              <Col xs={6} md={12} lg={12}>
                 <Language />
               </Col>
-              <Col lg={12} md={12} xs={6}>
+              <Col xs={6} md={12} lg={12}>
                 <Currency />
               </Col>
             </Row>
           </Col>
 
-          <Col lgOffset={1} lg={2} mdOffset={1} md={2}>
+          <Col md={2} mdOffset={1} lgOffset={1} lg={2}>
             <Nav>
               <NavTitle>Airbnb</NavTitle>
               <Link href="/">About us</Link>
@@ -54,7 +55,7 @@ export default () => {
               <Link href="/">Diversity & Belonging</Link>
             </Nav>
           </Col>
-          <Col lgOffset={1} lg={2} mdOffset={1} md={2}>
+          <Col md={2} mdOffset={1} lgOffset={1} lg={2}>
             <Nav>
               <NavTitle>Discover</NavTitle>
               <Link href="/">Trust & Safety</Link>
@@ -66,7 +67,7 @@ export default () => {
               <Link href="/">Airbnbmag</Link>
             </Nav>
           </Col>
-          <Col lgOffset={1} lg={2} mdOffset={1} md={2}>
+          <Col md={2} mdOffset={1} lgOffset={1} lg={2}>
             <Nav>
               <NavTitle>Hosting</NavTitle>
               <Link href="/">Why Host</Link>
@@ -80,13 +81,13 @@ export default () => {
       <SecondFooter>
         <div className="container">
           <Row>
-            <Col lg={2} md={3} sm={3}>
+            <Col sm={3} md={3} lg={2}>
               <Copyright href="/">
                 <Logo alt="Logo" src={logo} />
                 © Airbnb Inc.
               </Copyright>
             </Col>
-            <Col lgOffset={6} lg={4} sm={7} smOffset={1} md={8}>
+            <Col sm={7} smOffset={1} md={8} lgOffset={6} lg={4}>
               <SideNav />
             </Col>
           </Row>

@@ -54,7 +54,7 @@ export default () => {
   return (
     <Homes>
       <Row>
-        <Col lg={12} md={12} xs={12}>
+        <Col xs={12} md={12} lg={12}>
           <Title>
             Homes
             <SeeAll href="/Homes">See all</SeeAll>
@@ -62,7 +62,7 @@ export default () => {
         </Col>
       </Row>
       <Slider>
-        <Col lg={4} md={5} xs={8}>
+        <Col xs={8} md={5} lg={4}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img1} alt="La Salentina" />
@@ -74,7 +74,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={4} md={5} xs={8}>
+        <Col xs={8} md={5} lg={4}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img2} alt="Your private" />
@@ -86,7 +86,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={4} md={5} xs={8}>
+        <Col xs={8} md={5} lg={4}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img3} alt="La Salentina" />

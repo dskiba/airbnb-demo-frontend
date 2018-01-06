@@ -43,7 +43,7 @@ export default () => {
   return (
     <Featured>
       <Row>
-        <Col lg={12} md={12} xs={12}>
+        <Col xs={12} md={12} lg={12}>
           <Title>
             Featured destinations
             <SeeAll href="/Homes">See all</SeeAll>
@@ -51,7 +51,7 @@ export default () => {
         </Col>
       </Row>
       <Slider>
-        <Col lg={2} md={3} xs={4}>
+        <Col xs={4} md={3} lg={2}>
           <Card>
             <Link href="/Paris">
               <Img src={img1} alt="Paris" />
@@ -59,7 +59,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3} xs={4}>
+        <Col xs={4} md={3} lg={2}>
           <Card>
             <Link href="/Miami">
               <Img src={img2} alt="Miami" />
@@ -67,7 +67,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3} xs={4}>
+        <Col xs={4} md={3} lg={2}>
           <Card>
             <Link href="/Tokyo">
               <Img src={img3} alt="Tokyo" />
@@ -75,7 +75,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3} xs={4}>
+        <Col xs={4} md={3} lg={2}>
           <Card>
             <Link href="/Cape_town">
               <Img src={img4} alt="Cape town" />
@@ -83,7 +83,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3} xs={4}>
+        <Col xs={4} md={3} lg={2}>
           <Card>
             <Link href="/Seoul">
               <Img src={img5} alt="Seoul" />
@@ -91,7 +91,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3} xs={4}>
+        <Col xs={4} md={3} lg={2}>
           <Card>
             <Link href="/Los_Angeles">
               <Img src={img6} alt="Los Angeles" />

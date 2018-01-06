@@ -35,7 +35,6 @@ export const CardName = styled.a`
 
 export const CardPrice = styled.span`
   font-family: "Circular_Air-Bold";
-  line-height: 1.1rem;
   padding-right: 0.5rem;
   font-size: 13px;
   line-height: 15px;
@@ -105,21 +104,19 @@ export const SeeAll = styled.a`
     content: "";
     display: inline-block;
     position: absolute;
+    height: 7px;
+    width: 12px;
     box-sizing: border-box;
     top: 9px;
     margin-left: 8px;
-    height: 7px;
-    width: 12px;
+    padding-left: 8px;
+    vertical-align: bottom;
     background-color: #fff;
     background-image: url(${arrow});
     background-repeat: no-repeat;
     background-position: center center;
     background-cover: cover;
     border: none;
-    cursor: pointer;
-    z-index: 3;
     transform: rotate(-90deg);
-    padding-left: 8px;
-    vertical-align: bottom;
   }
 `;

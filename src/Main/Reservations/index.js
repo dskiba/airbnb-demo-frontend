@@ -70,7 +70,7 @@ export default () => {
         <SeeAll href="/Reservations">See all</SeeAll>
       </Title>
       <Slider>
-        <Col lg={3} md={4} xs={6}>
+        <Col xs={6} md={4} lg={3}>
           <Card>
             <Link href="/">
               <Img src={img1} alt="" />
@@ -80,7 +80,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} md={4} xs={6}>
+        <Col xs={6} md={4} lg={3}>
           <Card>
             <Link href="/">
               <Img src={img2} alt="" />
@@ -90,7 +90,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} md={4} xs={6}>
+        <Col xs={6} md={4} lg={3}>
           <Card>
             <Link href="/">
               <Img src={img3} alt="" />
@@ -100,7 +100,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} md={4} xs={6}>
+        <Col xs={6} md={4} lg={3}>
           <Card>
             <Link href="/">
               <Img src={img4} alt="" />

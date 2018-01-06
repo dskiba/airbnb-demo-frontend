@@ -67,19 +67,19 @@ export default () => {
     <Explore>
       <Title>Explore Airbnb</Title>
       <Slider>
-        <Col sm={5} md={4} xs={6}>
+        <Col xs={6} sm={5} md={5} lg={4}>
           <Card href="/Homes">
             <Img src={img2} alt="" />
             <CardTitle>Homes</CardTitle>
           </Card>
         </Col>
-        <Col lg={4} md={5} xs={6}>
+        <Col xs={6} sm={5} md={5} lg={4}>
           <Card href="/Experiences">
             <Img src={img3} alt="" />
             <CardTitle>Experiences</CardTitle>
           </Card>
         </Col>
-        <Col lg={4} md={5} xs={6}>
+        <Col xs={6} sm={5} md={5} lg={4}>
           <Card href="/Restaurants">
             <Img src={img1} alt="" />
             <CardTitle>Restaurants</CardTitle>

@@ -65,13 +65,13 @@ export default () => (
   <Header>
     <div className="container">
       <Row>
-        <Col lg={1} md={1} xs={2}>
+        <Col xs={2} md={1} lg={1}>
           <a href="/">
             <Logo alt="Logo" src={logo} />
             <Humburger />
           </a>
         </Col>
-        <Col lg={5} md={7} xs={10}>
+        <Col xs={10} md={7} lg={5}>
           <SearchFrom>
             <SearchInput
               type="text"
@@ -80,7 +80,7 @@ export default () => (
             />
           </SearchFrom>
         </Col>
-        <Col lg={6} md={6}>
+        <Col md={6} lg={6}>
           <Navigation />
         </Col>
       </Row>
