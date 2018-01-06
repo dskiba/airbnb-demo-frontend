@@ -40,12 +40,12 @@ export default () => (
   <Header>
     <div className="container">
       <Row>
-        <Col lg={1}>
+        <Col lg={1} md={1} sm={1} xs={2}>
           <a href="/">
             <Logo alt="Logo" src={logo} />
           </a>
         </Col>
-        <Col lg={5}>
+        <Col lg={5} sm={7} xs={10}>
           <SearchFrom>
             <SearchInput
               type="text"
@@ -54,7 +54,7 @@ export default () => (
             />
           </SearchFrom>
         </Col>
-        <Col lg={6}>
+        <Col lg={6} sm={6}>
           <Navigation />
         </Col>
       </Row>

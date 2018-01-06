@@ -70,7 +70,7 @@ export const SliderArrow = styled.button`
 `;
 
 export const SeeAll = styled.a`
-  display: inline-block;
+  display: block;
   font-family: CircularAir;
   padding-top: 10px;
   line-height: 24px;

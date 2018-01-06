@@ -18,7 +18,9 @@ import img4 from "./Cape-town.png";
 import img5 from "./Seoul.png";
 import img6 from "./Los-Angeles.png";
 
-const Featured = styled.section``;
+const Featured = styled.section`
+  overflow: hidden;
+`;
 
 const City = CardName.extend`
   font-weight: bold;
@@ -32,7 +34,7 @@ export default () => {
   return (
     <Featured>
       <Row>
-        <Col lg={12}>
+        <Col lg={12} sm={12} xs={12}>
           <Title>
             Featured destinations
             <SeeAll href="/Homes">See all</SeeAll>
@@ -40,7 +42,7 @@ export default () => {
         </Col>
       </Row>
       <Slider>
-        <Col lg={2} md={3}>
+        <Col lg={2} sm={3} xs={4}>
           <Card>
             <Link href="/Paris">
               <Img src={img1} alt="Paris" />
@@ -48,7 +50,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3}>
+        <Col lg={2} sm={3} xs={4}>
           <Card>
             <Link href="/Miami">
               <Img src={img2} alt="Miami" />
@@ -56,7 +58,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3}>
+        <Col lg={2} sm={3} xs={4}>
           <Card>
             <Link href="/Tokyo">
               <Img src={img3} alt="Tokyo" />
@@ -64,7 +66,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={2} md={3}>
+        <Col lg={2} sm={3} xs={4}>
           <Card>
             <Link href="/Cape_town">
               <Img src={img4} alt="Cape town" />

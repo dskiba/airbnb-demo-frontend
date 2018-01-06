@@ -9,6 +9,7 @@ import img3 from "./3.png";
 
 const Explore = styled.section`
   width: 100%;
+  overflow: hidden;
 `;
 
 const Card = styled.a`
@@ -41,21 +42,21 @@ export default () => {
     <Explore>
       <Title>Explore Airbnb</Title>
       <Slider>
-        <Col lg={4}>
+        <Col lg={4} sm={5} xs={6}>
           <Card href="/Homes">
-            <Img src={img1} alt="" />
+            <Img src={img2} alt="" />
             <CardTitle>Homes</CardTitle>
           </Card>
         </Col>
-        <Col lg={4}>
+        <Col lg={4} sm={5} xs={6}>
           <Card href="/Experiences">
-            <Img src={img2} alt="" />
+            <Img src={img3} alt="" />
             <CardTitle>Experiences</CardTitle>
           </Card>
         </Col>
-        <Col lg={4}>
+        <Col lg={4} sm={5} xs={6}>
           <Card href="/Restaurants">
-            <Img src={img3} alt="" />
+            <Img src={img1} alt="" />
             <CardTitle>Restaurants</CardTitle>
           </Card>
         </Col>

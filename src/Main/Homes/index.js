@@ -17,7 +17,9 @@ import img1 from "./1.png";
 import img2 from "./2.png";
 import img3 from "./3.png";
 
-const Homes = styled.section``;
+const Homes = styled.section`
+  overflow: hidden;
+`;
 
 const Hosts = styled.span`
   line-height: 14px;
@@ -46,7 +48,7 @@ export default () => {
   return (
     <Homes>
       <Row>
-        <Col lg={12}>
+        <Col lg={12} sm={12} xs={12}>
           <Title>
             Homes
             <SeeAll href="/Homes">See all</SeeAll>
@@ -54,7 +56,7 @@ export default () => {
         </Col>
       </Row>
       <Slider>
-        <Col lg={4}>
+        <Col lg={4} sm={5} xs={8}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img1} alt="La Salentina" />
@@ -66,7 +68,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={4}>
+        <Col lg={4} sm={5} xs={8}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img2} alt="Your private" />
@@ -78,7 +80,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={4}>
+        <Col lg={4} sm={5} xs={8}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img3} alt="La Salentina" />

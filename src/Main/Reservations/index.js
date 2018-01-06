@@ -7,7 +7,9 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 import img4 from "./4.png";
 
-const Reservations = styled.section``;
+const Reservations = styled.section`
+  overflow: hidden;
+`;
 
 const Category = styled.span`
   display: block;
@@ -51,7 +53,7 @@ export default () => {
         <SeeAll href="/Reservations">See all</SeeAll>
       </Title>
       <Slider>
-        <Col lg={3} md={4}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img1} alt="" />
@@ -61,7 +63,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} md={4}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img2} alt="" />
@@ -71,7 +73,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} md={4}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img3} alt="" />
@@ -81,7 +83,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} md={4}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img4} alt="" />

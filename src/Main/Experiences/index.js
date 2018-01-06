@@ -18,7 +18,9 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 import img4 from "./4.png";
 
-const Experiences = styled.section``;
+const Experiences = styled.section`
+  overflow: hidden;
+`;
 
 const Reviews = styled.span`
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -35,7 +37,7 @@ export default () => {
   return (
     <Experiences>
       <Row>
-        <Col lg={12}>
+        <Col lg={12} sm={12}>
           <Title>
             Experiences
             <SeeAll href="/Experiences">See all</SeeAll>
@@ -43,7 +45,7 @@ export default () => {
         </Col>
       </Row>
       <Slider>
-        <Col lg={3}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/Forest_therapy">
               <Img src={img1} alt="forest" />
@@ -55,7 +57,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/Whale_watching">
               <Img src={img2} alt="Sea" />
@@ -67,7 +69,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/Moutain_summit">
               <Img src={img3} alt="Mountain" />
@@ -79,7 +81,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={4} xs={6}>
           <Card>
             <Link href="/Salsa_night">
               <Img src={img4} alt="Dance" />

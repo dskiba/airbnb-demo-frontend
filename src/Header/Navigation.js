@@ -6,6 +6,9 @@ const Navigation = styled.nav`
   justify-content: flex-end;
   font-size: 0.9rem;
   line-height: 1.5rem;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const LinkList = styled.ul`
