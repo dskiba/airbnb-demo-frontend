@@ -2,11 +2,8 @@ import styled from "styled-components";
 import arrow from "./arrow.svg";
 
 export const Form = styled.form`
-  margin-top: 48px;
-  @media (max-width: 768px) {
-    margin-top: 16px;
-    margin-bottom: 20px;
-  }
+  margin-top: 16px;
+  margin-bottom: 20px;
 `;
 
 export const Select = styled.select`
@@ -23,13 +20,15 @@ export const Select = styled.select`
 
   padding-left: 16px;
   font-family: "Circular_Air-Light";
-  line-height: 21px;
-  font-size: 18px;
+
   color: #383838;
-  @media (max-width: 768px) {
-    font-size: 12px;
-    line-height: 14px;
-    height: 40px;
+
+  font-size: 12px;
+  line-height: 14px;
+  height: 40px;
+  @media (min-width: 768px) {
+    line-height: 21px;
+    font-size: 18px;
   }
 `;
 
@@ -59,14 +58,14 @@ export const Link = styled.a`
   line-height: 18px;
   margin-bottom: 8px;
   color: #636363;
-  font-size: 15px;
-  @media (min-width: 768px) {
-    font-size: 12px;
-    line-height: 14px;
-  }
 
+  font-size: 12px;
+  line-height: 14px;
   &:last-child {
     margin-bottom: 48px;
+  }
+  @media (min-width: 768px) {
+    font-size: 15px;
   }
 `;
 
@@ -74,13 +73,14 @@ export const Copyright = styled.a`
   display: inline-block;
   text-decoration: none;
   vertical-align: middle;
-  font-size: 15px;
-  line-height: 18px;
   color: #636363;
   margin-bottom: 35px;
-  @media (max-width: 768px) {
-    font-size: 12px;
-    line-height: 14px;
-    margin-right: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  margin-right: 20px;
+  @media (min-width: 768px) {
+    font-size: 15px;
+    line-height: 18px;
+    margom-right: 0;
   }
 `;

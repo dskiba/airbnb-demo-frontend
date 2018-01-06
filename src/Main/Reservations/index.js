@@ -16,42 +16,45 @@ const Reservations = styled.section`
 const Category = styled.span`
   display: block;
   font-family: "CircularAirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 10px;
-  line-height: 0.75rem;
+
+  font-size: 8px;
+  line-hight: 9px;
   margin-top: 12px;
   text-transform: uppercase;
   color: #383838;
-  @media (max-width: 768px) {
-    font-size: 8px;
-    line-hight: 9px;
+  @media (min-width: 768px) {
+    font-size: 10px;
+    line-height: 12px;
   }
 `;
 
 const ReservationName = styled.h3`
   display: block;
   font-family: "CircularAirBold";
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 14px;
+  line-hight: 16px;
   margin-top: 2px;
   margin-bottom: 4px;
   color: #383838;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    line-hight: 16px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 21px;
   }
 `;
 
 const Check = styled.span`
   display: block;
   font-family: "Circular_Air-Light";
-  line-height: 21px;
-  font-size: 18px;
+
+  font-size: 12px;
+  line-hight: 14px;
+
   color: #383838;
   mix-blend-mode: normal;
   opacity: 0.9;
-  @media (max-width: 768px) {
-    font-size: 12px;
-    line-hight: 14px;
+  @media (min-width: 768px) {
+    line-height: 21px;
+    font-size: 18px;
   }
 `;
 

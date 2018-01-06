@@ -1,7 +1,12 @@
 import React from "react";
 import { Form, Select, Option } from "./styled";
 
-const Currency = Form.extend``;
+const Currency = Form.extend`
+  margin-top: 48px;
+  @media (min-width: 768px) {
+    margin-top: 5px;
+  }
+`;
 
 export default () => {
   return (

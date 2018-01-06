@@ -35,33 +35,30 @@ const Card = styled.a`
 const CardTitle = styled.h3`
   font-family: CircularAir;
   line-height: normal;
-  font-size: 17px;
-  line-height: 20px;
+
   color: #383838;
+
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 12px;
   @media (min-width: 576px) {
     padding-left: 24px;
   }
-  @media (max-width: 768px) {
-    font-size: 12px;
-    line-height: 14px;
-    padding-left: 12px;
+  @media (min-width: 768px) {
+    font-size: 17px;
+    line-height: 20px;
   }
 `;
 
 const Img = styled.img`
   display: block;
-  width: 100%;
-  height: 74px;
-
+  box-sizing: border-box;
+  height: 78px;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   @media (min-width: 768px) {
     width: 96px;
     height: 72px;
-    margin-left: -0.0625rem;
-    margin-top: -0.0625rem;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
   }
 `;
 

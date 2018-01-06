@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Navigation = styled.nav`
-  display: flex;
-  justify-content: flex-end;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
-  @media (max-width: 991px) {
-    display: none;
+  display: none;
+  @media (min-width: 991px) {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
   }
 `;
 

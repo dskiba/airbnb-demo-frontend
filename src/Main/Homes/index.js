@@ -31,14 +31,14 @@ const Hosts = styled.span`
 
 const Description = styled.div`
   font-family: "Circular_Air-Light";
-  font-size: 15px;
-  line-height: normal;
+  font-size: 12px;
+  line-height: 14px;
   margin-top: 2px;
-  margin-bottom: px;
+  margin-bottom: 6px;
   color: #383838;
-  @media (max-width: 768px) {
-    font-size: 12px;
-    line-height: 14px;
+  @media (min-width: 768px) {
+    font-size: 15px;
+    line-height: 18px;
   }
 `;
 

@@ -6,14 +6,14 @@ export const Title = styled.h2`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-top: 48px;
-  line-height: 34px;
-  font-size: 32px;
+  font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
   color: #383838;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
+  @media (min-width: 768px) {
+    line-height: 34px;
+    font-size: 32px;
   }
 `;
 
@@ -23,12 +23,13 @@ export const Card = styled.div`
 
 export const CardName = styled.a`
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
-  line-height: normal;
-  font-size: 15px;
+  font-size: 13px;
+  line-height: 15px;
+
   color: #383838;
-  @media (max-width: 768px) {
-    font-size: 13px;
-    line-height: 15px;
+  @media (min-width: 768px) {
+    font-size: 15px;
+    line-height: 18px;
   }
 `;
 
@@ -36,12 +37,12 @@ export const CardPrice = styled.span`
   font-family: "Circular_Air-Bold";
   line-height: 1.1rem;
   padding-right: 0.5rem;
-  line-height: normal;
-  font-size: 15px;
+  font-size: 13px;
+  line-height: 15px;
   color: #383838;
-  @media (max-width: 768px) {
-    font-size: 13px;
-    line-height: 15px;
+  @media (min-width: 768px) {
+    font-size: 15px;
+    line-height: 18px;
   }
 `;
 
@@ -73,7 +74,6 @@ export const SliderArrow = styled.button`
   @media (min-width: 992px) {
     display: block;
     position: absolute;
-
     box-sizing: border-box;
     right: -12px;
     width: 40px;
@@ -88,8 +88,6 @@ export const SliderArrow = styled.button`
     cursor: pointer;
     z-index: 3;
     transform: rotate(-90deg);
-    @media (max-width: 1024px) {
-      display: none;
   }
 `;
 
@@ -106,10 +104,10 @@ export const SeeAll = styled.a`
     content: ">";
     padding-left: 8px;
     vertical-align: bottom;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
   }
-  @media (max-width: 768px) {
-    font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 14px;
   }
 `;

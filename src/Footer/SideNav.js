@@ -19,9 +19,14 @@ const Link = styled.a`
   margin-right: 16px;
 
   text-decoration: none;
-  @media (max-width: 991px) {
-    font-size: 12px;
-    line-height: 14px;
+
+  padding-top: 3px;
+  font-size: 12px;
+  line-height: 14px;
+  @media (min-width: 991px) {
+    font-size: 15px;
+    line-height: 18px;
+    padding-top: 0;
   }
 `;
 
@@ -31,6 +36,7 @@ const SocialIcon = styled.a`
   box-sizing: border-box;
   width: 24px;
   height: 24px;
+  margin-top: -3px;
   margin-left: 12px;
   background-size: cover;
 `;

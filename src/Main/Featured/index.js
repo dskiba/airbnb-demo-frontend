@@ -27,9 +27,11 @@ const Featured = styled.section`
 
 const City = CardName.extend`
   font-weight: bold;
-  @media (max-width: 768px) {
-    font-size: 12px;
-    line-hight: 14px;
+  font-size: 12px;
+  line-hight: 14px;
+  @media (min-width: 768px) {
+    font-size: 15px;
+    line-hight: 18px;
   }
 `;
 

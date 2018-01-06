@@ -3,17 +3,14 @@ import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import { Nav, NavTitle, Link, Copyright } from "./styled";
 import logo from "./logo.svg";
-import LanguageForm from "./LanguageForm";
-import CurrencyForm from "./CurrencyForm";
+import Language from "./LanguageForm";
+import Currency from "./CurrencyForm";
 import SideNav from "./SideNav";
 
 const Footer = styled.footer`
   margin-top: 64px;
   box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
   border-bottom: 1px solid #eee;
-  @media (max-width: 768px) {
-    margin-top: 16px;
-  }
 `;
 
 const SecondFooter = styled.footer`
@@ -38,10 +35,10 @@ export default () => {
           <Col lg={3} md={3} xs={12}>
             <Row>
               <Col lg={12} md={12} xs={6}>
-                <LanguageForm />
+                <Language />
               </Col>
               <Col lg={12} md={12} xs={6}>
-                <CurrencyForm />
+                <Currency />
               </Col>
             </Row>
           </Col>

@@ -1,15 +1,17 @@
 import React from "react";
 import { Form, Select, Option } from "./styled";
 
-const LanguageForm = Form.extend``;
+const Language = Form.extend`
+  margin-top: 48px;
+`;
 
 export default () => {
   return (
-    <LanguageForm>
+    <Language>
       <Select name="language">
         <Option value="English">English</Option>
         <Option value="Russian">Russian</Option>
       </Select>
-    </LanguageForm>
+    </Language>
   );
 };
