@@ -41,26 +41,24 @@ export default () => {
     <Explore>
       <Title>Explore Airbnb</Title>
       <Slider>
-        <Row>
-          <Col lg={4}>
-            <Card href="/Homes">
-              <Img src={img1} alt="" />
-              <CardTitle>Homes</CardTitle>
-            </Card>
-          </Col>
-          <Col lg={4}>
-            <Card href="/Experiences">
-              <Img src={img2} alt="" />
-              <CardTitle>Experiences</CardTitle>
-            </Card>
-          </Col>
-          <Col lg={4}>
-            <Card href="/Restaurants">
-              <Img src={img3} alt="" />
-              <CardTitle>Restaurants</CardTitle>
-            </Card>
-          </Col>
-        </Row>
+        <Col lg={4}>
+          <Card href="/Homes">
+            <Img src={img1} alt="" />
+            <CardTitle>Homes</CardTitle>
+          </Card>
+        </Col>
+        <Col lg={4}>
+          <Card href="/Experiences">
+            <Img src={img2} alt="" />
+            <CardTitle>Experiences</CardTitle>
+          </Card>
+        </Col>
+        <Col lg={4}>
+          <Card href="/Restaurants">
+            <Img src={img3} alt="" />
+            <CardTitle>Restaurants</CardTitle>
+          </Card>
+        </Col>
       </Slider>
     </Explore>
   );

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   Title,
   Slider,
+  SliderArrow,
   Card,
   CardName,
   CardPrice,
@@ -26,6 +27,10 @@ const Reviews = styled.span`
   color: #383838;
 `;
 
+const SlideNext = SliderArrow.extend`
+  top: calc(50% - 40px);
+`;
+
 export default () => {
   return (
     <Experiences>
@@ -38,56 +43,55 @@ export default () => {
         </Col>
       </Row>
       <Slider>
-        <Row>
-          <Col lg={3}>
-            <Card>
-              <Link href="/Forest_therapy">
-                <Img src={img1} alt="forest" />
-                <CardPrice>$29</CardPrice>
-                <CardName>Forest therapy</CardName>
-                <br />
-                <Stars />
-                <Reviews>44 reviews</Reviews>
-              </Link>
-            </Card>
-          </Col>
-          <Col lg={3}>
-            <Card>
-              <Link href="/Whale_watching">
-                <Img src={img2} alt="Sea" />
-                <CardPrice>$69</CardPrice>
-                <CardName>Whale watching</CardName>
-                <br />
-                <Stars />
-                <Reviews>46 reviews</Reviews>
-              </Link>
-            </Card>
-          </Col>
-          <Col lg={3}>
-            <Card>
-              <Link href="/Moutain_summit">
-                <Img src={img3} alt="Mountain" />
-                <CardPrice>$69</CardPrice>
-                <CardName>Table Mountain Summit, Cable Car Down</CardName>
-                <br />
-                <Stars />
-                <Reviews>44 reviews</Reviews>
-              </Link>
-            </Card>
-          </Col>
-          <Col lg={3}>
-            <Card>
-              <Link href="/Salsa_night">
-                <Img src={img4} alt="Dance" />
-                <CardPrice>$50</CardPrice>
-                <CardName>Salsa Night</CardName>
-                <br />
-                <Stars />
-                <Reviews>44 reviews</Reviews>
-              </Link>
-            </Card>
-          </Col>
-        </Row>
+        <Col lg={3}>
+          <Card>
+            <Link href="/Forest_therapy">
+              <Img src={img1} alt="forest" />
+              <CardPrice>$29</CardPrice>
+              <CardName>Forest therapy</CardName>
+              <br />
+              <Stars />
+              <Reviews>44 reviews</Reviews>
+            </Link>
+          </Card>
+        </Col>
+        <Col lg={3}>
+          <Card>
+            <Link href="/Whale_watching">
+              <Img src={img2} alt="Sea" />
+              <CardPrice>$69</CardPrice>
+              <CardName>Whale watching</CardName>
+              <br />
+              <Stars />
+              <Reviews>46 reviews</Reviews>
+            </Link>
+          </Card>
+        </Col>
+        <Col lg={3}>
+          <Card>
+            <Link href="/Moutain_summit">
+              <Img src={img3} alt="Mountain" />
+              <CardPrice>$69</CardPrice>
+              <CardName>Table Mountain Summit, Cable Car Down</CardName>
+              <br />
+              <Stars />
+              <Reviews>44 reviews</Reviews>
+            </Link>
+          </Card>
+        </Col>
+        <Col lg={3}>
+          <Card>
+            <Link href="/Salsa_night">
+              <Img src={img4} alt="Dance" />
+              <CardPrice>$50</CardPrice>
+              <CardName>Salsa Night</CardName>
+              <br />
+              <Stars />
+              <Reviews>44 reviews</Reviews>
+            </Link>
+          </Card>
+        </Col>
+        <SlideNext />
       </Slider>
     </Experiences>
   );

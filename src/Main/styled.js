@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import arrow from "../Footer/arrow.svg";
 
 export const Title = styled.h2`
   display: flex;
@@ -11,7 +12,9 @@ export const Title = styled.h2`
   color: #383838;
 `;
 
-export const Card = styled.div``;
+export const Card = styled.div`
+  position: relative;
+`;
 
 export const CardName = styled.a`
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -34,7 +37,37 @@ export const Link = styled.a`
   text-decoration: none;
 `;
 
-export const Slider = styled.div``;
+export const Slider = styled.div`
+  display: flex;
+  position: relative;
+
+  box-sizing: border-box;
+  margin-left: -5px;
+  margin-right: -5px;
+  flex-wrap: nowrap;
+`;
+
+export const SliderArrow = styled.button`
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+    position: absolute;
+    right: -12px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-image: url(${arrow});
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 0.05rem solid rgba(72, 72, 72, 0.2);
+    box-shadow: 0 0.125rem 0.25rem rgba(72, 72, 72, 0.16);
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 3;
+    transform: rotate(-90deg);
+  }
+`;
 
 export const SeeAll = styled.a`
   display: inline-block;
@@ -57,24 +90,7 @@ export const SeeAll = styled.a`
 
 export const Img = styled.img`
   display: block;
+  box-sizing: border-box;
   width: 100%;
   margin-bottom: 8px;
 `;
-
-// export const SliderArrow = styled.button`
-//   position: absolute;
-//   top: center;
-//   right: -0.75rem;
-//   width: 2.5rem;
-//   height: 2.5rem;
-//   box-sizing: border-box;
-//   background-color: #fff;
-//   background-image: url(${arrowRight});
-//   background-repeat: no-repeat;
-//   background-size: 0.6rem 1.1rem;
-//   background-position: center center;
-//   border: 0.05rem solid rgba(72, 72, 72, 0.2);
-//   box-shadow: 0 0.125rem 0.25rem rgba(72, 72, 72, 0.16);
-//   border-radius: 1.25rem;
-//   cursor: pointer;
-// `;
