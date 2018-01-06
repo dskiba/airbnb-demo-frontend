@@ -7,9 +7,7 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 import img4 from "./4.png";
 
-const Reservations = styled.section`
-  overflow: hidden;
-`;
+const Reservations = styled.section``;
 
 const Category = styled.span`
   display: block;

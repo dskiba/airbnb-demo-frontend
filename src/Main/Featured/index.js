@@ -18,9 +18,7 @@ import img4 from "./Cape-town.png";
 import img5 from "./Seoul.png";
 import img6 from "./Los-Angeles.png";
 
-const Featured = styled.section`
-  overflow: hidden;
-`;
+const Featured = styled.section``;
 
 const City = CardName.extend`
   font-weight: bold;

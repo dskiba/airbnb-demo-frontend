@@ -45,7 +45,7 @@ export default () => (
             <Logo alt="Logo" src={logo} />
           </a>
         </Col>
-        <Col lg={5} sm={7} xs={10}>
+        <Col lg={5} sm={7} xs={9}>
           <SearchFrom>
             <SearchInput
               type="text"

@@ -57,5 +57,4 @@ export const Copyright = styled.a`
   line-height: 18px;
   color: #636363;
   margin-bottom: 35px;
-  word-wrap: normal;
 `;

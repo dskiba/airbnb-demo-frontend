@@ -18,9 +18,7 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 import img4 from "./4.png";
 
-const Experiences = styled.section`
-  overflow: hidden;
-`;
+const Experiences = styled.section``;
 
 const Reviews = styled.span`
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -37,7 +35,7 @@ export default () => {
   return (
     <Experiences>
       <Row>
-        <Col lg={12} sm={12}>
+        <Col lg={12} sm={12} xs={12}>
           <Title>
             Experiences
             <SeeAll href="/Experiences">See all</SeeAll>

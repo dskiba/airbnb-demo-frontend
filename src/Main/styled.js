@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import arrow from "../Footer/arrow.svg";
+import Row from "react-flexbox-grid";
 
 export const Title = styled.h2`
   display: flex;
@@ -37,14 +38,21 @@ export const Link = styled.a`
   text-decoration: none;
 `;
 
+export const Img = styled.img`
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 8px;
+`;
+
 export const Slider = styled.div`
   display: flex;
+  flex-wrap: nowrap;
   position: relative;
 
   box-sizing: border-box;
   margin-left: -5px;
   margin-right: -5px;
-  flex-wrap: nowrap;
 `;
 
 export const SliderArrow = styled.button`
@@ -52,10 +60,11 @@ export const SliderArrow = styled.button`
   @media (min-width: 992px) {
     display: block;
     position: absolute;
+
+    box-sizing: border-box;
     right: -12px;
     width: 40px;
     height: 40px;
-    box-sizing: border-box;
     background-color: #fff;
     background-image: url(${arrow});
     background-repeat: no-repeat;
@@ -86,11 +95,4 @@ export const SeeAll = styled.a`
     font-size: 20px;
     font-weight: bold;
   }
-`;
-
-export const Img = styled.img`
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 8px;
 `;
