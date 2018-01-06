@@ -93,21 +93,33 @@ export const SliderArrow = styled.button`
 
 export const SeeAll = styled.a`
   display: block;
+  position: relative;
+  margin-right: 20px;
   font-family: CircularAir;
   line-height: 24px;
   font-size: 14px;
-  text-align: right;
   text-decoration: none;
   color: #383838;
 
   ::after {
-    content: ">";
+    content: "";
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    top: 9px;
+    margin-left: 8px;
+    height: 7px;
+    width: 12px;
+    background-color: #fff;
+    background-image: url(${arrow});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-cover: cover;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    transform: rotate(-90deg);
     padding-left: 8px;
     vertical-align: bottom;
-    font-size: 12px;
-    font-weight: bold;
-  }
-  @media (min-width: 768px) {
-    font-size: 14px;
   }
 `;
