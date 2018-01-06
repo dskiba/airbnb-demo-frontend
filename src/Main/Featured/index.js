@@ -1,15 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Title,
-  Slider,
-  Card,
-  CardName,
-  CardPrice,
-  Link,
-  SeeAll,
-  Img
-} from "../styled";
+import { Title, Slider, Card, CardName, Link, SeeAll, Img } from "../styled";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import img1 from "./Paris.png";
 import img2 from "./Miami.png";
