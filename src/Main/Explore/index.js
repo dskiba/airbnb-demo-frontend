@@ -8,7 +8,7 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 
 const Explore = styled.section`
-  width: 100%;
+  overflow: hidden;
 `;
 
 const Card = styled.a`

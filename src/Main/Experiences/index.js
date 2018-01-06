@@ -18,7 +18,9 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 import img4 from "./4.png";
 
-const Experiences = styled.section``;
+const Experiences = styled.section`
+  overflow: hidden;
+`;
 
 const Reviews = styled.span`
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
