@@ -11,13 +11,13 @@ const Navigation = styled.nav`
   }
 `;
 
-const LinkList = styled.ul`
+const Links = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
 `;
 
-const LinkItem = styled.li`
+const LinkList = styled.li`
   display: inline-block;
   vertical-align: top;
   fonzt-size: 16px;
@@ -38,19 +38,19 @@ const Link = styled.a`
 
 export default () => (
   <Navigation>
-    <LinkList>
-      <LinkItem>
+    <Links>
+      <LinkList>
         <Link href="/become-a-host">Become a host</Link>
-      </LinkItem>
-      <LinkItem>
+      </LinkList>
+      <LinkList>
         <Link href="/help">Help</Link>
-      </LinkItem>
-      <LinkItem>
+      </LinkList>
+      <LinkList>
         <Link href="/sign-up">Sign Up</Link>
-      </LinkItem>
-      <LinkItem>
+      </LinkList>
+      <LinkList>
         <Link href="/login">Login</Link>
-      </LinkItem>
-    </LinkList>
+      </LinkList>
+    </Links>
   </Navigation>
 );

@@ -18,6 +18,10 @@ const Link = styled.a`
   margin-right: 16px;
 
   text-decoration: none;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;
 
 const SocialIcon = styled.a`

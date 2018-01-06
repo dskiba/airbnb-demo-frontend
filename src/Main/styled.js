@@ -11,6 +11,10 @@ export const Title = styled.h2`
   line-height: 34px;
   font-size: 32px;
   color: #383838;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 `;
 
 export const Card = styled.div`
@@ -22,6 +26,10 @@ export const CardName = styled.a`
   line-height: normal;
   font-size: 15px;
   color: #383838;
+  @media (max-width: 768px) {
+    font-size: 13px;
+    line-height: 15px;
+  }
 `;
 
 export const CardPrice = styled.span`
@@ -31,6 +39,10 @@ export const CardPrice = styled.span`
   line-height: normal;
   font-size: 15px;
   color: #383838;
+  @media (max-width: 768px) {
+    font-size: 13px;
+    line-height: 15px;
+  }
 `;
 
 export const Link = styled.a`
@@ -40,19 +52,20 @@ export const Link = styled.a`
 
 export const Img = styled.img`
   display: block;
-  box-sizing: border-box;
   width: 100%;
+  box-sizing: border-box;
   margin-bottom: 8px;
 `;
 
 export const Slider = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  position: relative;
-
   box-sizing: border-box;
-  margin-left: -5px;
-  margin-right: -5px;
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: -8px;
+  margin-left: -8px;
 `;
 
 export const SliderArrow = styled.button`
@@ -81,7 +94,6 @@ export const SliderArrow = styled.button`
 export const SeeAll = styled.a`
   display: block;
   font-family: CircularAir;
-  padding-top: 10px;
   line-height: 24px;
   font-size: 14px;
   text-align: right;
@@ -92,7 +104,10 @@ export const SeeAll = styled.a`
     content: ">";
     padding-left: 8px;
     vertical-align: bottom;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `;

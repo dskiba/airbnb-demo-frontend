@@ -17,7 +17,8 @@
 }
 
 .container {
-  width: 976px;
+  max-width: 976px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 10px;
 }

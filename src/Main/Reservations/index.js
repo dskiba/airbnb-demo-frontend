@@ -8,7 +8,7 @@ import img3 from "./3.png";
 import img4 from "./4.png";
 
 const Reservations = styled.section`
-  overflow: hidden;
+  overflow: scroll;
 `;
 
 const Category = styled.span`
@@ -19,6 +19,10 @@ const Category = styled.span`
   margin-top: 12px;
   text-transform: uppercase;
   color: #383838;
+  @media (max-width: 768px) {
+    font-size: 8px;
+    line-hight: 9px;
+  }
 `;
 
 const ReservationName = styled.h3`
@@ -29,6 +33,10 @@ const ReservationName = styled.h3`
   margin-top: 2px;
   margin-bottom: 4px;
   color: #383838;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-hight: 16px;
+  }
 `;
 
 const Check = styled.span`
@@ -39,6 +47,10 @@ const Check = styled.span`
   color: #383838;
   mix-blend-mode: normal;
   opacity: 0.9;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-hight: 14px;
+  }
 `;
 
 const SlideNext = SliderArrow.extend`
@@ -53,7 +65,7 @@ export default () => {
         <SeeAll href="/Reservations">See all</SeeAll>
       </Title>
       <Slider>
-        <Col lg={3} sm={4} xs={6}>
+        <Col lg={3} md={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img1} alt="" />
@@ -63,7 +75,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} sm={4} xs={6}>
+        <Col lg={3} md={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img2} alt="" />
@@ -73,7 +85,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} sm={4} xs={6}>
+        <Col lg={3} md={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img3} alt="" />
@@ -83,7 +95,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={3} sm={4} xs={6}>
+        <Col lg={3} md={4} xs={6}>
           <Card>
             <Link href="/">
               <Img src={img4} alt="" />

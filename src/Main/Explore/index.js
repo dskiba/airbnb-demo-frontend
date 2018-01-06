@@ -8,7 +8,7 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 
 const Explore = styled.section`
-  overflow: hidden;
+  overflow: scroll;
 `;
 
 const Card = styled.a`
@@ -22,6 +22,7 @@ const Card = styled.a`
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
   border-radius: 4px;
+
   @media (min-width: 576px) {
     flex-direction: row;
     height: 72px;
@@ -32,24 +33,28 @@ const Card = styled.a`
 const CardTitle = styled.h3`
   font-family: CircularAir;
   line-height: normal;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 17px;
+  line-height: 20px;
   color: #383838;
   @media (min-width: 576px) {
     padding-left: 24px;
-    font-size: 17px;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 12px;
   }
 `;
 
 const Img = styled.img`
   display: block;
-  width: 144px;
+  width: 100%;
   height: 78px;
 
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   @media (min-width: 768px) {
-    widht: 96px;
+    width: 96px;
     height: 72px;
     margin-left: -0.0625rem;
     margin-top: -0.0625rem;
@@ -63,19 +68,19 @@ export default () => {
     <Explore>
       <Title>Explore Airbnb</Title>
       <Slider>
-        <Col sm={5} lg={4} xs={6}>
+        <Col sm={5} md={4} xs={6}>
           <Card href="/Homes">
             <Img src={img2} alt="" />
             <CardTitle>Homes</CardTitle>
           </Card>
         </Col>
-        <Col lg={4} sm={5} xs={6}>
+        <Col lg={4} md={5} xs={6}>
           <Card href="/Experiences">
             <Img src={img3} alt="" />
             <CardTitle>Experiences</CardTitle>
           </Card>
         </Col>
-        <Col lg={4} sm={5} xs={6}>
+        <Col lg={4} md={5} xs={6}>
           <Card href="/Restaurants">
             <Img src={img1} alt="" />
             <CardTitle>Restaurants</CardTitle>

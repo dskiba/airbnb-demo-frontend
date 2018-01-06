@@ -3,6 +3,10 @@ import arrow from "./arrow.svg";
 
 export const Form = styled.form`
   margin-top: 48px;
+  @media (max-width: 768px) {
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Select = styled.select`
@@ -22,11 +26,20 @@ export const Select = styled.select`
   line-height: 21px;
   font-size: 18px;
   color: #383838;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 14px;
+    height: 40px;
+  }
 `;
 
 export const Option = styled.option``;
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
 export const NavTitle = styled.h4`
   margin-top: 48px;
@@ -34,6 +47,10 @@ export const NavTitle = styled.h4`
   line-height: 18px;
   font-size: 15px;
   margin-bottom: 16px;
+  @media (min-width: 768px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;
 
 export const Link = styled.a`
@@ -43,6 +60,10 @@ export const Link = styled.a`
   margin-bottom: 8px;
   color: #636363;
   font-size: 15px;
+  @media (min-width: 768px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 
   &:last-child {
     margin-bottom: 48px;
@@ -57,4 +78,8 @@ export const Copyright = styled.a`
   line-height: 18px;
   color: #636363;
   margin-bottom: 35px;
+  @media (min-width: 768px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;

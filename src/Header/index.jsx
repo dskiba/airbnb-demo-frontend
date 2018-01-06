@@ -4,11 +4,11 @@ import logo from "./logo.svg";
 import shape from "./shape.png";
 import Navigation from "./Navigation";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import arrow from "../Footer/arrow.svg";
 
 const Header = styled.header`
   display: flex;
-  height: 80px;
-  align-items: center;
+  margin-top: 16px;
   border-bottom: 1px solid #eee;
 `;
 
@@ -16,6 +16,7 @@ const Logo = styled.img`
   margin-top: 9px;
   height: 32px;
   width: 32px;
+  margin-bottom: 16px;
 `;
 
 const SearchFrom = styled.form``;
@@ -35,18 +36,21 @@ const SearchInput = styled.input`
   color: #383838;
   opacity: 0.64;
   background: url(${shape}) no-repeat 16px 13px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export default () => (
   <Header>
     <div className="container">
       <Row>
-        <Col lg={1} md={1} sm={1} xs={2}>
+        <Col lg={1} md={1} xs={2}>
           <a href="/">
             <Logo alt="Logo" src={logo} />
           </a>
         </Col>
-        <Col lg={5} sm={7} xs={9}>
+        <Col lg={5} md={7} xs={10}>
           <SearchFrom>
             <SearchInput
               type="text"
@@ -55,7 +59,7 @@ export default () => (
             />
           </SearchFrom>
         </Col>
-        <Col lg={6} sm={6}>
+        <Col lg={6} md={6}>
           <Navigation />
         </Col>
       </Row>

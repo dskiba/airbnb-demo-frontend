@@ -18,7 +18,7 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 
 const Homes = styled.section`
-  overflow: hidden;
+  overflow: scroll;
 `;
 
 const Hosts = styled.span`
@@ -34,6 +34,10 @@ const Description = styled.div`
   margin-top: 2px;
   margin-bottom: px;
   color: #383838;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;
 
 const HouseName = CardName.extend`
@@ -48,7 +52,7 @@ export default () => {
   return (
     <Homes>
       <Row>
-        <Col lg={12} sm={12} xs={12}>
+        <Col lg={12} md={12} xs={12}>
           <Title>
             Homes
             <SeeAll href="/Homes">See all</SeeAll>
@@ -56,7 +60,7 @@ export default () => {
         </Col>
       </Row>
       <Slider>
-        <Col lg={4} sm={5} xs={8}>
+        <Col lg={4} md={5} xs={8}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img1} alt="La Salentina" />
@@ -68,7 +72,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={4} sm={5} xs={8}>
+        <Col lg={4} md={5} xs={8}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img2} alt="Your private" />
@@ -80,7 +84,7 @@ export default () => {
             </Link>
           </Card>
         </Col>
-        <Col lg={4} sm={5} xs={8}>
+        <Col lg={4} md={5} xs={8}>
           <Card>
             <Link href="/La_Salentina">
               <Img src={img3} alt="La Salentina" />
