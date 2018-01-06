@@ -19,7 +19,9 @@ import img5 from "./Seoul.png";
 import img6 from "./Los-Angeles.png";
 
 const Featured = styled.section`
-  overflow: scroll;
+  @media (max-width: 1024px) {
+    overflow: scroll;
+  }
   margin-bottom: 40px;
 `;
 

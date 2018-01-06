@@ -5,20 +5,21 @@ import twitter from "./twitter.svg";
 import instagram from "./instagram.svg";
 
 const SideNav = styled.nav`
-  display: inline-block;
   display: flex;
   justify-content: flex-end;
 `;
 
 const Link = styled.a`
+  display: inline-block;
   font-size: 15px;
   text-align: right;
-  line-heigh: 18px;
+  line-height: 18px;
+  vertical-align: bottom;
   color: #636363;
   margin-right: 16px;
 
   text-decoration: none;
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     font-size: 12px;
     line-height: 14px;
   }
@@ -30,7 +31,7 @@ const SocialIcon = styled.a`
   box-sizing: border-box;
   width: 24px;
   height: 24px;
-  margin-left: 0.75rem;
+  margin-left: 12px;
   background-size: cover;
 `;
 

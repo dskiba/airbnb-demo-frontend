@@ -88,6 +88,8 @@ export const SliderArrow = styled.button`
     cursor: pointer;
     z-index: 3;
     transform: rotate(-90deg);
+    @media (max-width: 1024px) {
+      display: none;
   }
 `;
 

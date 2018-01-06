@@ -6,7 +6,7 @@ const Navigation = styled.nav`
   justify-content: flex-end;
   font-size: 0.9rem;
   line-height: 1.5rem;
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     display: none;
   }
 `;

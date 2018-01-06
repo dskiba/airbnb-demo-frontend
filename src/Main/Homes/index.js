@@ -18,7 +18,9 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 
 const Homes = styled.section`
-  overflow: scroll;
+  @media (max-width: 1024px) {
+    overflow: scroll;
+  }
 `;
 
 const Hosts = styled.span`

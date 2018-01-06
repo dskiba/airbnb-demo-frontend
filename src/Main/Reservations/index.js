@@ -8,7 +8,9 @@ import img3 from "./3.png";
 import img4 from "./4.png";
 
 const Reservations = styled.section`
-  overflow: scroll;
+  @media (max-width: 1024px) {
+    overflow: scroll;
+  }
 `;
 
 const Category = styled.span`

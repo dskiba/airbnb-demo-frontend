@@ -83,13 +83,13 @@ export default () => {
       <SecondFooter>
         <div className="container">
           <Row>
-            <Col lg={2} md={3}>
+            <Col lg={2} md={3} sm={3}>
               <Copyright href="/">
                 <Logo alt="Logo" src={logo} />
                 © Airbnb Inc.
               </Copyright>
             </Col>
-            <Col lgOffset={6} lg={4} md={6}>
+            <Col lgOffset={6} lg={4} sm={7} smOffset={1} md={8}>
               <SideNav />
             </Col>
           </Row>

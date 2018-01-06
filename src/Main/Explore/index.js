@@ -8,7 +8,9 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 
 const Explore = styled.section`
-  overflow: scroll;
+  @media (max-width: 1024px) {
+    overflow: scroll;
+  }
 `;
 
 const Card = styled.a`
@@ -49,7 +51,7 @@ const CardTitle = styled.h3`
 const Img = styled.img`
   display: block;
   width: 100%;
-  height: 78px;
+  height: 74px;
 
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;

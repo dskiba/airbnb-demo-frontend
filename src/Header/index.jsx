@@ -16,10 +16,27 @@ const Logo = styled.img`
   margin-top: 9px;
   height: 32px;
   width: 32px;
+`;
+const Humburger = styled.button`
+  display: none;
+  @media (max-width: 991px) {
+    position: absolute;
+    top: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 12px;
+    height: 6px;
+    background: url(${arrow}) no-repeat;
+    background-color: $fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    cursor: pointer;
+  }
+`;
+const SearchFrom = styled.form`
   margin-bottom: 16px;
 `;
-
-const SearchFrom = styled.form``;
 
 const SearchInput = styled.input`
   display: block;
@@ -36,7 +53,7 @@ const SearchInput = styled.input`
   color: #383838;
   opacity: 0.64;
   background: url(${shape}) no-repeat 16px 13px;
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     font-size: 14px;
   }
 `;
@@ -48,6 +65,7 @@ export default () => (
         <Col lg={1} md={1} xs={2}>
           <a href="/">
             <Logo alt="Logo" src={logo} />
+            <Humburger />
           </a>
         </Col>
         <Col lg={5} md={7} xs={10}>

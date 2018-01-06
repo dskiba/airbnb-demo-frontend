@@ -78,8 +78,9 @@ export const Copyright = styled.a`
   line-height: 18px;
   color: #636363;
   margin-bottom: 35px;
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 12px;
     line-height: 14px;
+    margin-right: 20px;
   }
 `;
