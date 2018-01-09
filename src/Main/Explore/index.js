@@ -8,8 +8,9 @@ import img2 from "./2.png";
 import img3 from "./3.png";
 
 const Explore = styled.section`
-  @media (max-width: 1024px) {
-    overflow: scroll;
+  overflow: scroll;
+  @media (min-width: 1024px) {
+    overflow: visible;
   }
 `;
 

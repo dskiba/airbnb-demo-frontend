@@ -8,8 +8,9 @@ import img3 from "./3.png";
 import img4 from "./4.png";
 
 const Reservations = styled.section`
-  @media (max-width: 1024px) {
-    overflow: scroll;
+  overflow: scroll;
+  @media (min-width: 1024px) {
+    overflow: visible;
   }
 `;
 
