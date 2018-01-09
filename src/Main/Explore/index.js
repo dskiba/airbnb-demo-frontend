@@ -28,7 +28,6 @@ const Card = styled.a`
 
   @media (min-width: 576px) {
     flex-direction: row;
-    height: 72px;
     align-items: center;
   }
 `;
@@ -57,6 +56,9 @@ const Img = styled.img`
   height: 78px;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+  @media (min-width: 576px) {
+    height: 72px;
+  }
   @media (min-width: 768px) {
     width: 96px;
     height: 72px;
