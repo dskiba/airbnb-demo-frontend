@@ -48,7 +48,6 @@ const Check = styled.span`
   font-family: "Circular_Air-Light";
   font-size: 12px;
   line-hight: 14px;
-  maaaargin: 666px;
   color: #383838;
   mix-blend-mode: normal;
   opacity: 0.9;

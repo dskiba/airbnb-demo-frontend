@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

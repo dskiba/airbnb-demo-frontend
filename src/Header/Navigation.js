@@ -6,6 +6,8 @@ const Navigation = styled.nav`
   @media (min-width: 991px) {
     display: flex;
     justify-content: flex-end;
+    max-width: 392px;
+    margin-left: auto;
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
