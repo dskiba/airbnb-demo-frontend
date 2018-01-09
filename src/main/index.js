@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Grid, Row, Col } from "react-flexbox-grid";
 import Explore from "./Explore";
 import Experiences from "./Experiences";
 import Homes from "./Homes";
@@ -12,13 +12,13 @@ const Main = styled.main``;
 export default () => {
   return (
     <Main>
-      <div className="container">
+      <Grid>
         <Explore />
         <Experiences />
         <Homes />
         <Resevations />
         <Featured />
-      </div>
+      </Grid>
     </Main>
   );
 };

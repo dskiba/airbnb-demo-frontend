@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "./logo.svg";
-import shape from "./shape.png";
+import magnifier from "../assets/magnifier.svg";
 import Navigation from "./Navigation";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import arrow from "../Footer/arrow.svg";
+import arrow from "../assets/arrow.svg";
 
 const Header = styled.header`
   display: flex;
@@ -55,7 +55,7 @@ const SearchInput = styled.input`
   font-size: 14px;
   color: #383838;
   opacity: 0.64;
-  background: url(${shape}) no-repeat 16px 13px;
+  background: url(${magnifier}) no-repeat 16px 13px;
   @media (min-width: 991px) {
     font-size: 16px;
   }
@@ -63,7 +63,7 @@ const SearchInput = styled.input`
 
 export default () => (
   <Header>
-    <div className="container">
+    <Grid>
       <Row>
         <Col xs={2} md={1} lg={1}>
           <a href="/">
@@ -84,6 +84,6 @@ export default () => (
           <Navigation />
         </Col>
       </Row>
-    </div>
+    </Grid>
   </Header>
 );

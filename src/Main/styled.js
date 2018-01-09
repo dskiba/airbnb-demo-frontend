@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import arrow from "../Footer/arrow.svg";
+import arrow from "../assets/arrow.svg";
 import Row from "react-flexbox-grid";
 
 export const Title = styled.h2`

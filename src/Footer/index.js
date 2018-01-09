@@ -31,7 +31,7 @@ const Logo = styled.img`
 export default () => {
   return (
     <Footer>
-      <div className="container">
+      <Grid>
         <Row>
           <Col xs={12} md={3} lg={3}>
             <Row>
@@ -77,7 +77,7 @@ export default () => {
             </Nav>
           </Col>
         </Row>
-      </div>
+      </Grid>
       <SecondFooter>
         <div className="container">
           <Row>
