@@ -54,10 +54,9 @@ export default () => {
               <Img src={img1} alt="forest" />
               <CardPrice>$29</CardPrice>
               <CardName>Forest therapy</CardName>
-              <br />
-              <Stars />
-              <Reviews>44 reviews</Reviews>
             </Link>
+            <Stars />
+            <Reviews>44 reviews</Reviews>
           </Card>
         </Col>
         <Col xs={6} md={4} lg={3}>
@@ -66,10 +65,9 @@ export default () => {
               <Img src={img2} alt="Sea" />
               <CardPrice>$69</CardPrice>
               <CardName>Whale watching</CardName>
-              <br />
-              <Stars />
-              <Reviews>46 reviews</Reviews>
             </Link>
+            <Stars />
+            <Reviews>46 reviews</Reviews>
           </Card>
         </Col>
         <Col xs={6} md={4} lg={3}>
@@ -78,10 +76,9 @@ export default () => {
               <Img src={img3} alt="Mountain" />
               <CardPrice>$69</CardPrice>
               <CardName>Table Mountain Summit, Cable Car Down</CardName>
-              <br />
-              <Stars />
-              <Reviews>44 reviews</Reviews>
             </Link>
+            <Stars />
+            <Reviews>44 reviews</Reviews>
           </Card>
         </Col>
         <Col xs={6} md={4} lg={3}>
@@ -90,10 +87,9 @@ export default () => {
               <Img src={img4} alt="Dance" />
               <CardPrice>$50</CardPrice>
               <CardName>Salsa Night</CardName>
-              <br />
-              <Stars />
-              <Reviews>44 reviews</Reviews>
             </Link>
+            <Stars />
+            <Reviews>44 reviews</Reviews>
           </Card>
         </Col>
         <SlideNext />

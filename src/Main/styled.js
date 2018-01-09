@@ -25,7 +25,7 @@ export const CardName = styled.a`
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 15px;
-
+  margin-bottom: 7px;
   color: #383838;
   @media (min-width: 768px) {
     font-size: 15px;
@@ -34,6 +34,7 @@ export const CardName = styled.a`
 `;
 
 export const CardPrice = styled.span`
+  display: inline-block;
   font-family: "Circular_Air-Bold";
   padding-right: 0.5rem;
   font-size: 13px;
