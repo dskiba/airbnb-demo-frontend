@@ -9,7 +9,9 @@ import img3 from "./3.png";
 
 const Explore = styled.section`
   overflow: scroll;
+  margin-top: 78px;
   @media (min-width: 1024px) {
+    margin-top: 128px;
     overflow: visible;
   }
 `;
@@ -35,9 +37,7 @@ const Card = styled.a`
 const CardTitle = styled.h3`
   font-family: CircularAir;
   line-height: normal;
-
   color: #383838;
-
   font-size: 12px;
   line-height: 14px;
   padding-left: 12px;

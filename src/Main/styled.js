@@ -8,8 +8,8 @@ export const Title = styled.h2`
   align-items: center;
   margin-top: 48px;
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 28px;
   color: #383838;
   @media (min-width: 768px) {
     line-height: 34px;
