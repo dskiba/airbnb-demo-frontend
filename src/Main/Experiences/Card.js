@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import { Link, Img, CardName, CardPrice, Reviews } from "../../UI/index";
-import Stars from "../UI/Stars/index";
+import Stars from "../../UI/Stars/index";
 import img1 from "./1.png";
 import img2 from "./2.png";
 import img3 from "./3.png";

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import { Link, Img, CardName } from "../../UI/index";
-import Stars from "../UI/Stars/index";
+import Stars from "../../UI/Stars/index";
 
 const City = CardName.extend`
   font-weight: bold;

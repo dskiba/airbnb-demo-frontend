@@ -42,7 +42,7 @@ export const Nav = styled.nav`
 
 export const NavTitle = styled.h4`
   margin-top: 48px;
-  font-family: "Circular_Air-Bol";
+  font-family: "Circular_Air-Bold";
   line-height: 18px;
   font-size: 15px;
   margin-bottom: 16px;
