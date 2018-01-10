@@ -1,17 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Title,
-  Slider,
-  SliderArrow,
-  Card,
-  CardName,
-  CardPrice,
-  Link,
-  SeeAll,
-  Img
-} from "../styled";
-import Stars from "../Stars";
+import Card from "./Card";
+import { Title, SliderArrow, SeeAll, Slider } from "../UI/index";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import img1 from "./1.png";
 import img2 from "./2.png";
@@ -23,13 +13,6 @@ const Experiences = styled.section`
   @media (min-width: 1024px) {
     overflow: visible;
   }
-`;
-
-const Reviews = styled.span`
-  font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
-  line-height: normal;
-  font-size: 12px;
-  color: #383838;
 `;
 
 const SlideNext = SliderArrow.extend`
@@ -49,48 +32,44 @@ export default () => {
       </Row>
       <Slider>
         <Col xs={6} md={4} lg={3}>
-          <Card>
-            <Link href="/Forest_therapy">
-              <Img src={img1} alt="forest" />
-              <CardPrice>$29</CardPrice>
-              <CardName>Forest therapy</CardName>
-            </Link>
-            <Stars />
-            <Reviews>44 reviews</Reviews>
-          </Card>
+          <Card
+            link={"#"}
+            imgSrc={img1}
+            imgAlt={"Forest"}
+            price={29}
+            title={"Forest therapy"}
+            reviews={44}
+          />
         </Col>
         <Col xs={6} md={4} lg={3}>
-          <Card>
-            <Link href="/Whale_watching">
-              <Img src={img2} alt="Sea" />
-              <CardPrice>$69</CardPrice>
-              <CardName>Whale watching</CardName>
-            </Link>
-            <Stars />
-            <Reviews>46 reviews</Reviews>
-          </Card>
+          <Card
+            link={"#"}
+            imgSrc={img2}
+            imgAlt={"Whale watching"}
+            price={69}
+            title={"Whale watching"}
+            reviews={46}
+          />
         </Col>
         <Col xs={6} md={4} lg={3}>
-          <Card>
-            <Link href="/Moutain_summit">
-              <Img src={img3} alt="Mountain" />
-              <CardPrice>$69</CardPrice>
-              <CardName>Table Mountain Summit, Cable Car Down</CardName>
-            </Link>
-            <Stars />
-            <Reviews>44 reviews</Reviews>
-          </Card>
+          <Card
+            link={"#"}
+            imgSrc={img3}
+            imgAlt={"Table Mountain Summit, Cable Car Down"}
+            price={69}
+            title={"Table Mountain Summit, Cable Car Down"}
+            reviews={44}
+          />
         </Col>
         <Col xs={6} md={4} lg={3}>
-          <Card>
-            <Link href="/Salsa_night">
-              <Img src={img4} alt="Dance" />
-              <CardPrice>$50</CardPrice>
-              <CardName>Salsa Night</CardName>
-            </Link>
-            <Stars />
-            <Reviews>44 reviews</Reviews>
-          </Card>
+          <Card
+            link={"#"}
+            imgSrc={img4}
+            imgAlt={"Salsa Night"}
+            price={50}
+            title={"Salsa Night"}
+            reviews={44}
+          />
         </Col>
         <SlideNext />
       </Slider>

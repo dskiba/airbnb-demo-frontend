@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import arrow from "../assets/arrow.svg";
+import arrow from "../../assets/arrow.svg";
 import Row from "react-flexbox-grid";
 
 export const Title = styled.h2`
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
   margin-top: 48px;
   font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -15,6 +16,13 @@ export const Title = styled.h2`
     line-height: 34px;
     font-size: 32px;
   }
+`;
+
+export const Reviews = styled.span`
+  font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: normal;
+  font-size: 12px;
+  color: #383838;
 `;
 
 export const Card = styled.div`
@@ -92,14 +100,21 @@ export const SliderArrow = styled.button`
 `;
 
 export const SeeAll = styled.a`
-  display: block;
+  display: inline-block;
+  box-sizing: border-box;
   position: relative;
   margin-right: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
   font-family: CircularAir;
+  font-size: 12px;
   line-height: 24px;
-  font-size: 14px;
   text-decoration: none;
+  white-space: nowrap;
   color: #383838;
+  @media only screen and (min-width: 991px) {
+    font-size: 14px;
+  }
 
   ::after {
     content: "";

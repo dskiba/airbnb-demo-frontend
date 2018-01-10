@@ -11,7 +11,7 @@ const Star = styled.span`
   display: inline-block;
   width: 12px;
   height: 12px;
-  margin-right: 8px;
+  margin-right: 4px;
   background-image: url(${star});
   background-size: cover;
 `;
