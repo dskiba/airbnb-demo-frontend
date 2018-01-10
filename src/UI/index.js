@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import arrow from "../../assets/arrow.svg";
+import arrow from "../assets/arrow.svg";
 import Row from "react-flexbox-grid";
 
 export const Title = styled.h2`
@@ -104,8 +104,6 @@ export const SeeAll = styled.a`
   box-sizing: border-box;
   position: relative;
   margin-right: 20px;
-  padding-right: 30px;
-  padding-left: 30px;
   font-family: CircularAir;
   font-size: 12px;
   line-height: 24px;

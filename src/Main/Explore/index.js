@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Slider, Title } from "../UI/index";
+import { Slider, Title } from "../../UI/index";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Card from "./Card";
 import HomesImg from "./1.png";
