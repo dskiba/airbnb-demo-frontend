@@ -7,8 +7,18 @@ import Logo from "./Logo";
 
 const Header = styled.header`
   text-align: center;
-  margin-top: 16px;
   border-bottom: 1px solid #eee;
+  padding-top: 16px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0.5px 0 rgba(72, 72, 72, 0.3);
 `;
 
 const SearchFrom = styled.form`
