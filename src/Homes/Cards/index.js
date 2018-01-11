@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
+
+import Pagination from "./Paginator";
 import Card from "./Card";
 import img1 from "../../Main/Homes/1.png";
 import img2 from "../../Main/Homes/2.png";
@@ -85,6 +87,7 @@ export default props => {
             />
           </Col>
         </Row>
+        <Pagination />
       </Grid>
     </Cards>
   );
