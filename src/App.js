@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
+import Homes from "./Homes";
 import Footer from "./Footer";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <React.Fragment>
+          <Header />
+          <Route path="/" exact component={Main} />
+          <Route path="/Homes" component={Homes} />
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
