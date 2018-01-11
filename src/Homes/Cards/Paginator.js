@@ -40,7 +40,7 @@ const Page = styled.a`
   border-radius: 50%;
 `;
 
-const NextPages = styled.span`
+const NextPages = styled.a`
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -80,9 +80,11 @@ const MapIcon = styled.button`
   border-radius: 50%;
   background: url(${mapicon}) no-repeat center;
   background-size: 16px 20px;
-
   margin-top: 15px;
   margin-bottom: 24px;
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 export default props => {
