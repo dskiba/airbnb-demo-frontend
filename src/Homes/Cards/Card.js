@@ -29,7 +29,6 @@ const Description = styled.div`
 `;
 
 const CardImg = Img.extend`
-  min-width: 304px;
   max-height: 242px;
 
   margin-top: 24px;
