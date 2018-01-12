@@ -54,7 +54,7 @@ const Check = styled.span`
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Link to={props.link}>
         <Img src={props.imgSrc} alt={props.imgAlt} />
         <Category> {props.category} </Category>
         <ReservationName>{props.name}</ReservationName>

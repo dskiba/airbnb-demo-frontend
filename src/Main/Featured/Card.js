@@ -17,7 +17,7 @@ const City = CardName.extend`
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Link to={props.link}>
         <Img src={props.imgSrc} alt={props.imgAlt} />
         <City>{props.city}</City>
       </Link>

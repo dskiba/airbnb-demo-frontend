@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Link } from "react-router-dom";
 import img1 from "./1.png";
 import img2 from "./2.png";
 import img3 from "./3.png";
 
-const Card = styled.a`
+const Card = styled(Link)`
   display: block;
   position: relative;
   align-items: center;
@@ -53,7 +53,7 @@ const Img = styled.img`
 
 export default props => {
   return (
-    <Card href={props.link}>
+    <Card to={props.link}>
       <Img src={props.imgSrc} alt={props.imgAlt} />
       <Title>{props.title}</Title>
     </Card>

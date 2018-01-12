@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as RouteLink } from "react-router-dom";
 import styled from "styled-components";
 import arrow from "../assets/arrow.svg";
 import logo from "./logo.svg";
@@ -9,7 +10,7 @@ const Img = styled.img`
   width: 32px;
 `;
 
-const Link = styled.a`
+const Link = styled(RouteLink)`
   display: inline-block;
   text-align: center;
 `;
@@ -34,7 +35,7 @@ const Humburger = styled.button`
 `;
 
 export default () => (
-  <Link href="/">
+  <Link to="/">
     <Img alt="Logo" src={logo} />
     <Humburger />
   </Link>

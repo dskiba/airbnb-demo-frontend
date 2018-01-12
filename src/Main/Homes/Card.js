@@ -27,7 +27,7 @@ const Description = styled.div`
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Link to={props.link}>
         <Img src={props.imgSrc} alt={props.imgAlt} />
         <Title>
           ${props.price} {props.title}

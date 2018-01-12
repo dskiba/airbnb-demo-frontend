@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as RouteLink } from "react-router-dom";
 import arrow from "../assets/arrow.svg";
 import Row from "react-flexbox-grid";
 
@@ -54,7 +55,7 @@ export const CardPrice = styled.span`
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled(RouteLink)`
   display: block;
   text-decoration: none;
 `;

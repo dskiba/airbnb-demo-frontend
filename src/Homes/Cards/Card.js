@@ -37,7 +37,7 @@ const CardImg = Img.extend`
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Link to={props.link}>
         <CardImg src={props.imgSrc} alt={props.imgAlt} />
         <Title>
           <Price>${props.price}</Price>

@@ -13,7 +13,7 @@ const Price = CardPrice.extend``;
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Link to={props.link}>
         <Img src={props.imgSrc} alt={props.imgAlt} />
         <Price>{"$" + props.price}</Price>
         <Title>{props.title}</Title>
