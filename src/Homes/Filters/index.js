@@ -6,7 +6,7 @@ import Dates from "./Dates/index";
 const Filters = styled.header`
   display: flex;
   position: fixed;
-  top: 81px;
+  top: 80px;
   width: 100%;
   align-content: flex-start;
   padding-top: 12px;

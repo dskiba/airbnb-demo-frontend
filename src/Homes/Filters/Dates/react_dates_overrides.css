@@ -1,3 +1,17 @@
-.DayPicker_weekHeaders .DayPicker_weekHeader {
-  top: 58px;
+.CalendarMonthGrid__vertical_scrollable {
+  overflow-y: hidden;
+}
+
+.DayPicker_transitionContainer__verticalScrollable {
+  padding-bottom: 172px;
+}
+
+.CalendarMonth {
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 567px) {
+  .DayPicker__withBorder {
+    box-shadow: none;
+  }
 }

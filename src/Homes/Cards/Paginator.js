@@ -7,7 +7,7 @@ import mapicon from "../../assets/mapIcon.svg";
 const Pagination = styled.div`
   position: relative;
   margin-top: 45px;
-  font-family: "CircularA ir", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 19px;
   text-align: center;

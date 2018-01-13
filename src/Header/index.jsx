@@ -7,7 +7,6 @@ import Logo from "./Logo";
 
 const Header = styled.header`
   text-align: center;
-  border-bottom: 1px solid #eee;
   padding-top: 16px;
 
   position: fixed;
@@ -52,7 +51,7 @@ const SearchInput = styled.input`
   }
 `;
 
-export default () => (
+export default props => (
   <Header>
     <Grid>
       <Row>
@@ -61,7 +60,7 @@ export default () => (
           <SearchInput
             type="text"
             name="search"
-            placeholder="Try &quot;Miami&quot;"
+            placeholder={props.placeholder}
           />
         </SearchFrom>
         <Navigation />
