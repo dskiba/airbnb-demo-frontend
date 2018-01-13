@@ -4,6 +4,11 @@ import styled from "styled-components";
 import arrow from "../assets/arrow.svg";
 import logo from "./logo.svg";
 
+const Logo = styled.div`
+  display: inline-block;
+  margin-left: 6px;
+`;
+
 const Img = styled.img`
   margin-top: 9px;
   height: 32px;
@@ -35,8 +40,10 @@ const Humburger = styled.button`
 `;
 
 export default () => (
-  <Link to="/">
-    <Img alt="Logo" src={logo} />
-    <Humburger />
-  </Link>
+  <Logo>
+    <Link to="/">
+      <Img alt="Logo" src={logo} />
+      <Humburger />
+    </Link>
+  </Logo>
 );

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./Homes/Filters/Dates/react_dates_overrides.css";
+import "normalize.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";

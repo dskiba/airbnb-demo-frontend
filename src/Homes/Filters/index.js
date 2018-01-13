@@ -56,30 +56,6 @@ export const Title = styled.h3`
   text-align: center;
 `;
 
-export const CloseFilter = styled.button`
-  position: absolute;
-  top: 1rem;
-  left: 0.5rem;
-  width: 1rem;
-  height: 1rem;
-  border: none;
-  ${"" /* background-image: url(${}); */} background-position: center center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  cursor: pointer;
-`;
-
-export const Reset = styled.button`
-  position: absolute;
-  top: 1rem;
-  right: 0.5rem;
-  font-size: 0.9rem;
-  color: #0f7276;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-`;
-
 export default () => {
   return (
     <Filters>

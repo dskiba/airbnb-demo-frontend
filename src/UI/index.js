@@ -111,7 +111,7 @@ export const SeeAll = styled.a`
   text-decoration: none;
   white-space: nowrap;
   color: #383838;
-  @media only screen and (min-width: 991px) {
+  @media only screen and (min-width: 992px) {
     font-size: 14px;
   }
 
