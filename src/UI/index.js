@@ -9,7 +9,7 @@ export const Title = styled.h2`
   flex-wrap: nowrap;
   align-items: center;
   margin-top: 48px;
-  font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 24px;
   line-height: 28px;
   color: #383838;
@@ -20,7 +20,7 @@ export const Title = styled.h2`
 `;
 
 export const Reviews = styled.span`
-  font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: normal;
   font-size: 12px;
   color: #383838;
@@ -31,7 +31,7 @@ export const Card = styled.div`
 `;
 
 export const CardName = styled.a`
-  font-family: "CircularAir", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 15px;
   margin-bottom: 7px;
@@ -44,7 +44,7 @@ export const CardName = styled.a`
 
 export const CardPrice = styled.span`
   display: inline-block;
-  font-family: "Circular_Air-Bold";
+  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
   padding-right: 0.5rem;
   font-size: 13px;
   line-height: 15px;
@@ -105,7 +105,7 @@ export const SeeAll = styled.a`
   box-sizing: border-box;
   position: relative;
   margin-right: 20px;
-  font-family: CircularAir;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   text-decoration: none;

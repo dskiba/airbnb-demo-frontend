@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Title, Slider, SliderArrow, SeeAll } from "../../UI/index";
+import { Link as RouteLink } from "react-router-dom";
 import Card from "./Card";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import img1 from "./1.png";
-import img2 from "./2.png";
-import img3 from "./3.png";
+import img1 from "../../Homes/Cards/1.png";
+import img2 from "../../Homes/Cards/2.png";
+import img3 from "../../Homes/Cards/3.png";
 
 const Homes = styled.section`
   overflow: scroll;
@@ -18,15 +19,21 @@ const SlideNext = SliderArrow.extend`
   top: calc(50% - 40px);
 `;
 
+const Link = styled(RouteLink)`
+  text-decoration: none;
+`;
+
 export default () => {
   return (
     <Homes>
       <Row>
         <Col xs={12} md={12} lg={12}>
-          <Title>
-            Homes
-            <SeeAll href="/Homes">See all</SeeAll>
-          </Title>
+          <Link to="/Homes">
+            <Title>
+              Homes
+              <SeeAll to="/Homes">See all</SeeAll>
+            </Title>
+          </Link>
         </Col>
       </Row>
       <Slider>

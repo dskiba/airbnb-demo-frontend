@@ -32,7 +32,7 @@ const Link = styled.a`
   text-decoration: none;
   color: #383838;
   line-height: 24px;
-  font-family: "CircularAir";
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   text-align: center;
 `;

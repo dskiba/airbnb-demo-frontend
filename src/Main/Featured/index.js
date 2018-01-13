@@ -15,7 +15,7 @@ const Featured = styled.section`
   @media (min-width: 1024px) {
     overflow: visible;
   }
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 `;
 
 const SlideNext = SliderArrow.extend`

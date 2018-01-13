@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
-
 import Pagination from "./Paginator";
 import Card from "./Card";
-import img1 from "../../Main/Homes/1.png";
-import img2 from "../../Main/Homes/2.png";
-import img3 from "../../Main/Homes/3.png";
+import img1 from "./1.png";
+import img2 from "./2.png";
+import img3 from "./3.png";
 import img4 from "./4.png";
 import img5 from "./5.png";
 import img6 from "./6.png";

@@ -7,10 +7,9 @@ import mapicon from "../../assets/mapIcon.svg";
 const Pagination = styled.div`
   position: relative;
   margin-top: 45px;
-  font-family: "Circular_Air-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "CircularA ir", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 19px;
-  font-weight: bold;
   text-align: center;
 `;
 
@@ -25,19 +24,20 @@ const Page = styled.a`
   padding-bottom: 6px;
   padding-left: 13px;
   padding-right: 13px;
-  font-family: "Circular_Air-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 19px;
   font-size: 16px;
   color: ${props => (props.active ? "#fff" : "#0F7276")};
   background: ${props => (props.active ? "#008489" : "")};
-
   text-decoration: none;
   vertical-align: middle;
   text-align: center;
-
   box-sizing: border-box;
-
   border-radius: 50%;
+  @media (min-width: 768px) {
+    line-height: 21px;
+    font-size: 18px;
+  }
 `;
 
 const NextPages = styled.a`
@@ -57,14 +57,19 @@ const TotalPages = styled.span`
   display: inline-block;
   margin-top: 15px;
   margin-bottom: 24px;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 19px;
   color: #383838;
 `;
 
 const FullPrices = styled.p`
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #636363;
   margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
 `;
 
 const MapIcon = styled.button`

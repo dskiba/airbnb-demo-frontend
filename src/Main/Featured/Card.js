@@ -7,10 +7,10 @@ import Stars from "../../UI/Stars/index";
 const City = CardName.extend`
   font-weight: bold;
   font-size: 12px;
-  line-hight: 14px;
+  line-height: 14px;
   @media (min-width: 768px) {
+    line-height: 18px;
     font-size: 15px;
-    line-hight: 18px;
   }
 `;
 

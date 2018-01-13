@@ -9,8 +9,7 @@ import img3 from "./3.png";
 
 const Category = styled.span`
   display: block;
-  font-family: "CircularAirBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 8px;
   line-hight: 9px;
   font-weight: bold;
@@ -25,7 +24,7 @@ const Category = styled.span`
 
 const ReservationName = styled.h3`
   display: block;
-  font-family: "CircularAirBold";
+  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-hight: 16px;
   margin-top: 2px;
@@ -39,7 +38,8 @@ const ReservationName = styled.h3`
 
 const Check = styled.span`
   display: block;
-  font-family: "Circular_Air-Light";
+  font-family: "Circular Air Light", Helvetica Neue, Helvetica, Arial,
+    sans-serif;
   font-size: 12px;
   line-hight: 14px;
   color: #383838;

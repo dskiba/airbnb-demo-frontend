@@ -19,7 +19,8 @@ export const Select = styled.select`
   background-repeat: no-repeat;
 
   padding-left: 16px;
-  font-family: "Circular_Air-Light";
+  font-family: "Circular Air Light", Helvetica Neue, Helvetica, Arial,
+    sans-serif;
 
   color: #383838;
 
@@ -42,23 +43,22 @@ export const Nav = styled.nav`
 
 export const NavTitle = styled.h4`
   margin-top: 48px;
-  font-family: "Circular_Air-Bold";
-  line-height: 18px;
-  font-size: 15px;
+  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+
   margin-bottom: 16px;
   @media (min-width: 768px) {
-    font-size: 12px;
-    line-height: 14px;
+    line-height: 18px;
+    font-size: 15px;
   }
 `;
 
 export const Link = styled.a`
   display: block;
   text-decoration: none;
-  line-height: 18px;
   margin-bottom: 8px;
   color: #636363;
-
   font-size: 12px;
   line-height: 14px;
   &:last-child {
@@ -66,6 +66,7 @@ export const Link = styled.a`
   }
   @media (min-width: 768px) {
     font-size: 15px;
+    line-height: 18px;
   }
 `;
 

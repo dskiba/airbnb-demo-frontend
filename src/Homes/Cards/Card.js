@@ -20,7 +20,8 @@ const Price = CardPrice.extend`
 const Hosts = Reviews.extend``;
 
 const Description = styled.div`
-  font-family: "Circular_Air-Light";
+  font-family: "Circular Air Light", Helvetica Neue, Helvetica, Arial,
+    sans-serif;
   font-size: 15px;
   line-height: 18px;
   margin-top: 2px;
