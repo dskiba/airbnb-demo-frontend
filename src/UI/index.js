@@ -135,3 +135,29 @@ export const SeeAll = styled.a`
     transform: rotate(-90deg);
   }
 `;
+
+export const FilterButton = styled.button`
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: #383838;
+  margin: 0.75rem 0.75rem 0.75rem 0;
+  transition: background-color 0.2s ease-out;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "CircularAir Normal";
+  background: ${props => (props.selected ? "#008489" : "#fff")};
+  border: 1px solid
+    ${props => (props.selected ? "#008489" : " rgba(72, 72, 72, 0.2);")};
+  color: ${props => (props.selected ? "#fff" : "#383838")};
+`;
+
+export const Fade = styled.div`
+  position: fixed;
+  z-index: -1;
+  top: 8rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+`;

@@ -1,72 +1,79 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import Dates from "./Dates/index";
 
-const Filters = styled.header`
-  display: flex;
+import Dates from "./Dates";
+import Guests from "./Guests";
+
+const Filters = styled.div`
   position: fixed;
+  padding: 12px 8px;
   top: 80px;
-  width: 100%;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
   align-content: flex-start;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
-  z-index: 2;
+  background: #fff;
+  box-shadow: 0 0 0.5px rgba(72, 72, 72, 0.3);
+  z-index: 10px;
+  & > .container {
+    margin: 0;
+  }
+  @media (min-width: 576px) {
+    & > .container {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  
 `;
 
-export const FilterButton = styled.button`
-  display: inline-block;
-  position: relative;
-  padding: 7px 16px;
-  margin-right: 12px;
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  border: 1px solid rgba(72, 72, 72, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  cursor: pointer;
-  color: ${props => (props.isOpen ? "#fff" : "#383838")};
-  background: ${props => (props.isOpen ? "#008489" : "transparent")};
-
-  &:hover {
-    background-color: rgba(216, 216, 216, 0.3);
-  }
-  &:active {
-    background: #008489;
-    color: #fff;
-  }
-  @media (min-width: 992px) {
-    display: inline-block;
-  }
-  ${props =>
-    props.hidden &&
-    css`
-      display: none;
-    `};
+const ContainerFlex = styled.div`
+  margin: 0 auto;
+  max-width: 976px;
+  display: flex;
+  align-items: flex-start;
 `;
 
-export const Title = styled.h3`
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
-  text-align: center;
-`;
+export default class Filter extends React.Component {
+  state = {
+    isOpen: false,
+    openedFilter: "",
+    dates: {
+      startDate: null,
+      endDate: null
+    }
+  };
 
-export default () => {
-  return (
-    <Filters>
-      <Grid>
-        <Dates />
-        <FilterButton>Guests</FilterButton>
-        <FilterButton hidden>Room type</FilterButton>
-        <FilterButton hidden>Price</FilterButton>
-        <FilterButton hidden>Instant book</FilterButton>
-        <FilterButton>More filters</FilterButton>
-      </Grid>
-    </Filters>
-  );
-};
+  toggleFilter = key => {
+    this.setState(
+      prevState =>
+        prevState.openedFilter === key
+          ? { openedFilter: null }
+          : { openedFilter: key }
+    );
+  };
+
+  onApply = values => {
+    this.setState({ openedFilter: null, ...values });
+  };
+
+  render() {
+    return (
+      <Filters>
+        <Grid>
+          <Row>
+            <Dates
+              dates={this.state.dates}
+              isOpen={this.state.openedFilter === "dates"}
+              onClick={() => this.toggleFilter("dates")}
+              onApply={this.onApply}
+            />
+            <Guests />
+          </Row>
+        </Grid>
+      </Filters>
+    );
+  }
+}

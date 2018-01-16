@@ -14,8 +14,8 @@ export default () => {
         <title>Airbnb Homes Page</title>
       </Helmet>
       <Header placeholder="Anywhere  ·  Homes" />
+      <Filters />
       <Homes>
-        <Filters />
         <Cards />
       </Homes>
     </React.Fragment>

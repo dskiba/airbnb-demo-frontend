@@ -18,6 +18,15 @@ const Header = styled.header`
   align-items: center;
   background: #fff;
   box-shadow: 0 0.5px 0 rgba(72, 72, 72, 0.3);
+  & > .container {
+    margin: 0;
+  }
+  @media (min-width: 576px) {
+    & > .container {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 `;
 
 const SearchFrom = styled.form`

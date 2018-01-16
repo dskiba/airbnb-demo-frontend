@@ -1,17 +1,34 @@
-.CalendarMonthGrid__vertical_scrollable {
-  overflow-y: hidden;
+.DateRangePickerInput {
+  background-color: #008489;
+  border-radius: 4px;
 }
 
-.DayPicker_transitionContainer__verticalScrollable {
-  padding-bottom: 172px;
+.CalendarMonth_caption {
+  color: #383838;
 }
 
-.CalendarMonth {
-  padding-bottom: 10px;
+.DateInput_input {
+  padding: 0;
+  border: none;
 }
-
-@media screen and (max-width: 567px) {
-  .DayPicker__withBorder {
-    box-shadow: none;
-  }
+.DateInput {
+  background-color: transparent;
+}
+.DateInput input {
+  font-family: "Circular Air", "Arial", "Helvetica", sans-serif;
+  background-color: transparent;
+  color: #fff;
+}
+.DateInput input:-webkit-input-placeholder {
+  color: #fff;
+}
+.DateInput_input__focused {
+  border: none;
+  background-color: transparent;
+}
+.DayPicker {
+  box-shadow: none;
+}
+.DayPickerNavigation_container {
+  display: none;
 }

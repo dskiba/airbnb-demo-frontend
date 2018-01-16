@@ -1,323 +1,149 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import React from "react";
+import styled from "styled-components";
+
 import "react-dates/initialize";
+import { DayPickerRangeController } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import "./react_dates_overrides.css";
-import { DayPickerRangeController, isInclusivelyAfterDay } from "react-dates";
-import omit from "lodash/omit";
 import moment from "moment";
-import cross from "../../../assets/plus.svg";
 
-const Btn = styled.button`
-  position: relative;
-  margin-right: 8px;
-  padding: 7px 16px;
-  border: 1px solid rgba(72, 72, 72, 0.3);
-  border-radius: 4px;
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  color: #383838;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s;
-  color: ${props => (props.isOpen ? "#fff" : "#383838")};
-  background: ${props => (props.isOpen ? "#008489" : "transparent")};
-`;
+import Responsive from "react-responsive";
 
-const Filter = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  @media (min-width: 576px) {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    display: inline-block;
-  }
-`;
+import isEqual from "lodash/isEqual";
+import Dropdown from "../Dropdown";
+import arrow from "../arrow.svg";
 
-const DayPicker = styled(DayPickerRangeController)`
-  position: relative;
-`;
+const Lg = props => <Responsive {...props} minWidth={992} />;
+const Md = props => <Responsive {...props} minWidth={576} maxWidth={991} />;
+const Sm = props => <Responsive {...props} maxWidth={575} />;
 
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 48px;
-  padding: 0 8px;
-  @media (min-width: 576px) {
-    display: none;
-  }
-`;
+const Calendar = styled.div``;
 
-const Caption = styled.span`
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 600;
-  color: #383838;
-`;
-
-const Exit = styled.button`
-  width: 16px;
-  height: 16px;
-  background: url(${cross}) no-repeat center;
-  background-size: contain;
-  border: none;
-  cursor: pointer;
-`;
-
-const Reset = styled.button`
-  padding: 0;
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 600;
-  color: #0f7276;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-`;
-
-const Cancel = styled.button`
-  width: 110px;
-  border: none;
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 600;
-  color: #636363;
-  background: transparent;
-  cursor: pointer;
-`;
-
-const Apply = styled.button`
-  width: 110px;
-  border: none;
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 600;
-  color: #008489;
-  background: transparent;
-  cursor: pointer;
-`;
-
-const Overlay = styled.div`
-  position: fixed;
-  top: 137px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.8);
-`;
-
-const DatesRange = styled.div`
-  padding: 8px;
-  padding-top: 30px;
-  text-align: left;
-  @media (min-width: 576px) {
-    display: none;
-  }
-`;
-
-const StartDate = styled.span`
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: ${props => (props.startDate ? "#636363" : "#0f7276")};
-  border-bottom: ${props => (props.startDate ? "none" : "1px solid #008489")};
-`;
-
-const EndDate = styled.span`
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: ${props => (props.startDate ? "#0f7276" : "#636363")};
-  border-bottom: ${props => (props.startDate ? "1px solid #008489" : "none")};
-`;
-
-const Bottom = styled.div`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  height: 64px;
-  padding: 8px;
-  box-shadow: 0 -1px #d5d5d5;
-  z-index: 2;
-  background: #fff;
-  @media (min-width: 576px) {
-    padding: 0;
-    box-shadow: none;
-    z-index: 1;
-    background: transparent;
-  }
-`;
-
-const CalendarRow = styled.div`
-  position: relative;
-  top: -12px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
+const SmWrapper = styled.div`
   padding-top: 40px;
-  height: 48px;
-  padding: 8px;
+  padding-left: 8px;
+  display: flex;
+  justify-content: start;
 `;
 
-const Save = styled.button`
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
+const Input = styled.input`
+  max-width: 30%;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
-  font-weight: Bold;
-  color: #fff;
-  background: #ff5a5f;
-  cursor: pointer;
-  @media (min-width: 576px) {
-    display: none;
-  }
+  border: none;
+  border-bottom: ${props => (props.isActive ? "1px solid #008489" : "none")};
+  color: ${props => (props.isActive ? "#0F7276" : "#636363")};
 `;
+const Arrow = styled.img`
+  margin-left: 16px;
+  margin-right: 16px;
+`;
+
+const getStartDate = date => (date ? date.format("MMM Do") : "Check in");
+const getEndDate = date => (date ? date.format("MMM Do") : "Check out");
+
+const getTitle = ({ startDate, endDate }) => {
+  return getStartDate(startDate) + " - " + getEndDate(endDate);
+};
 
 export default class Dates extends React.Component {
-  state = {
-    focused: true,
-    isOpen: false,
-    isTouchDevice: true,
-    focusedInput: this.props.autoFocusEndDate ? "startDate" : "endDate",
-    startDate: this.props.initialStartDate,
-    endDate: this.props.initialEndDate
+  initialValues = {
+    dates: {
+      startDate: null,
+      endDate: null
+    },
+    focusedInput: "startDate",
+    isTouchDevice: true
   };
 
-  onDatesChange = this.onDatesChange.bind(this);
-  onFocusChange = this.onFocusChange.bind(this);
+  state = this.initialValues;
 
-  FilterStatus = (startDateString, endDateString) => {
-    if (startDateString && endDateString) {
-      return `${startDateString} — ${endDateString}`;
-    } else if (this.state.isOpen) {
-      return "Check in — Check out";
-    } else {
-      return "Dates";
-    }
-  };
-
-  renderCalendarInfo = () => {
-    return (
-      <CalendarRow>
-        {this.state.startDate && this.state.endDate ? (
-          <Cancel onClick={this.onReset}>Reset</Cancel>
-        ) : (
-          <Cancel onClick={this.toggleOpen}>Cancel</Cancel>
-        )}
-        <Apply onClick={this.props.onSave}>Apply</Apply>
-      </CalendarRow>
-    );
-  };
-
-  onReset = () => {
-    this.setState({ startDate: null, endDate: null });
-  };
-
-  onDatesChange({ startDate, endDate }) {
-    this.setState({ startDate, endDate });
-  }
-
-  onFocusChange(focusedInput) {
+  onDatesChange = ({ startDate, endDate }) => {
     this.setState({
-      focusedInput: !focusedInput ? "startDate" : focusedInput
+      dates: {
+        startDate,
+        endDate
+      }
     });
-  }
-
-  toggleOpen = () => {
-    this.setState(() => ({ isOpen: !this.state.isOpen }));
   };
 
-  numberOfMonths() {
-    return matchMedia("(min-width: 992px)").matches ? 2 : 1;
-  }
+  onFocusChange = focusedInput => {
+    this.setState({
+      focusedInput: focusedInput || "startDate"
+    });
+  };
+
+  onApply = () => this.props.onApply({ dates: this.state.dates });
+
+  onReset = () => this.setState({ dates: { startDate: null }, endDate: null });
+
+  isReset = () => this.props.isReset();
 
   render() {
-    const {
-      isOpen,
-      startDate,
-      endDate,
-      isTouchDevice,
-      focusedInput
-    } = this.state;
-
-    const startDateString = startDate && startDate.format("YYYY-MM-DD");
-    const endDateString = endDate && endDate.format("YYYY-MM-DD");
-
     return (
-      <React.Fragment>
-        <Btn isOpen={isOpen} onClick={this.toggleOpen}>
-          {this.FilterStatus(startDateString, endDateString)}
-          {isOpen ? this.filter : null}
-          {isOpen ? (
-            <Filter isOpen={isOpen}>
-              <Header>
-                <Exit />
-                <Caption>Dates</Caption>
-                <Reset onClick={this.onReset}>Reset</Reset>
-              </Header>
-              <DatesRange>
-                <StartDate startDate={startDate}>
-                  {startDate ? startDateString : "Check-in"}
-                </StartDate>
-                <EndDate endDate={endDate} startDate={startDate}>
-                  {endDate ? endDateString : "Check-out"}
-                </EndDate>
-              </DatesRange>
-              <DayPicker
-                numberOfMonths={
-                  matchMedia("(min-width: 992px)").matches
-                    ? 2
-                    : matchMedia("(min-width: 576px)").matches ? 1 : 12
-                }
-                isTouchDevice={isTouchDevice}
-                isOutsideRange={day => !isInclusivelyAfterDay(day, moment())}
-                hideKeyboardShortcutsPanel
-                isOpen={isOpen}
-                renderCalendarInfo={
-                  matchMedia("(min-width: 576px)").matches
-                    ? this.renderCalendarInfo
-                    : null
-                }
-                onDatesChange={this.onDatesChange}
-                onFocusChange={this.onFocusChange}
-                focusedInput={focusedInput}
-                startDate={startDate}
-                endDate={endDate}
-                onClickOutside="false"
-                orientation={
-                  matchMedia("(min-width: 576px)").matches
-                    ? "horizontal"
-                    : "verticalScrollable"
-                }
+      <Dropdown
+        name="Dates"
+        isOpen={this.props.isOpen}
+        isActive={!isEqual(this.state, this.initialValues)}
+        activeTitle={getTitle(this.state.dates)}
+        onClick={this.props.onClick}
+        onApply={this.onApply}
+        onReset={this.onReset}
+        isReset={isEqual(this.state, this.initialValues)}
+      >
+        <Calendar>
+          <Sm>
+            <SmWrapper>
+              <Input
+                isActive
+                readOnly
+                value={getStartDate(this.state.dates.startDate)}
               />
-              <Bottom>
-                <Save onClick={this.props.onSave}>Save</Save>
-              </Bottom>
-            </Filter>
-          ) : null}
-        </Btn>
-        {isOpen ? <Overlay onClick={this.toggleOpen} /> : null}
-      </React.Fragment>
+              <Arrow src={arrow} />
+              <Input readOnly value={getEndDate(this.state.dates.endDate)} />
+            </SmWrapper>
+            <DayPickerRangeController
+              startDate={this.state.dates.startDate}
+              endDate={this.state.dates.endDate}
+              hideKeyboardShortcutsPanel={true}
+              numberOfMonths={12}
+              orientation="vertical"
+              verticalHeight={568}
+              isOutsideRange={day => day.isBefore(moment(), "day")}
+              focusedInput={this.state.focusedInput}
+              onDatesChange={this.onDatesChange}
+              onFocusChange={this.onFocusChange}
+            />
+          </Sm>
+          <Md>
+            <DayPickerRangeController
+              startDate={this.state.dates.startDate}
+              endDate={this.state.dates.endDate}
+              hideKeyboardShortcutsPanel={true}
+              numberOfMonths={1}
+              isOutsideRange={day => day.isBefore(moment(), "day")}
+              focusedInput={this.state.focusedInput}
+              onDatesChange={this.onDatesChange}
+              onFocusChange={this.onFocusChange}
+            />
+          </Md>
+          <Lg>
+            <DayPickerRangeController
+              startDate={this.state.dates.startDate}
+              endDate={this.state.dates.endDate}
+              hideKeyboardShortcutsPanel={true}
+              numberOfMonths={2}
+              isOutsideRange={day => day.isBefore(moment(), "day")}
+              focusedInput={this.state.focusedInput}
+              onDatesChange={this.onDatesChange}
+              onFocusChange={this.onFocusChange}
+            />
+          </Lg>
+        </Calendar>
+      </Dropdown>
     );
   }
 }
