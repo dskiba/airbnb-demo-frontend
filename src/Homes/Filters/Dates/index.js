@@ -78,7 +78,7 @@ export default class Dates extends React.Component {
 
   onApply = () => this.props.onApply({ dates: this.state.dates });
 
-  onReset = () => this.setState({ dates: { startDate: null }, endDate: null });
+  onReset = () => this.setState({ dates: { startDate: null, endDate: null } });
 
   isReset = () => this.props.isReset();
 
@@ -92,7 +92,7 @@ export default class Dates extends React.Component {
         onClick={this.props.onClick}
         onApply={this.onApply}
         onReset={this.onReset}
-        isReset={isEqual(this.state, this.initialValues)}
+        isReset={isEqual(this.state.dates, this.initialValues.dates)}
       >
         <Calendar>
           <Sm>
