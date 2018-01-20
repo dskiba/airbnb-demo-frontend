@@ -26,14 +26,7 @@ const Filters = styled.div`
       margin-right: auto;
       margin-left: auto;
     }
-  
-`;
-
-const ContainerFlex = styled.div`
-  margin: 0 auto;
-  max-width: 976px;
-  display: flex;
-  align-items: flex-start;
+  }
 `;
 
 export default class Filter extends React.Component {
@@ -43,6 +36,11 @@ export default class Filter extends React.Component {
     dates: {
       startDate: null,
       endDate: null
+    },
+    guests: {
+      adults: 1,
+      children: 0,
+      infants: 0
     }
   };
 
@@ -70,7 +68,12 @@ export default class Filter extends React.Component {
               onClick={() => this.toggleFilter("dates")}
               onApply={this.onApply}
             />
-            <Guests />
+            <Guests
+              guests={this.state.guests}
+              isOpen={this.state.openedFilter === "guests"}
+              onClick={() => this.toggleFilter("guests")}
+              onApply={this.onApply}
+            />
           </Row>
         </Grid>
       </Filters>

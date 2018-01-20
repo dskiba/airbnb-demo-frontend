@@ -4,6 +4,7 @@ import closeIcon from "./plus.svg";
 import arrow from "./arrow.svg";
 
 const Filter = styled.button`
+  margin-left: 8px;
   margin-right: 12px;
   padding: 7px 16px;
   display: ${props => (props.showLg ? "none" : "inline-block")};
@@ -71,8 +72,10 @@ const ConfirmButton = styled.button`
   display: none;
   @media screen and (min-width: 576px) {
     display: block;
+    margin-top: 8px;
+    width: 110px;
+    height: 64px;
     box-sizing: border-box;
-    padding: 30px 40px;
     font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
@@ -157,7 +160,7 @@ export default function(props) {
       </Filter>
       {props.isOpen && (
         <div>
-          <Overflow />
+          <Overflow onClick={props.onClick} />
           <DropDownWrapper>
             <Header>
               <Close onClick={props.onClick} />

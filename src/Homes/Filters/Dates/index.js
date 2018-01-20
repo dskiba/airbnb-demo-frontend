@@ -6,10 +6,9 @@ import { DayPickerRangeController } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import "./react_dates_overrides.css";
 import moment from "moment";
-
 import Responsive from "react-responsive";
-
 import isEqual from "lodash/isEqual";
+
 import Dropdown from "../Dropdown";
 import arrow from "../arrow.svg";
 
@@ -63,10 +62,7 @@ export default class Dates extends React.Component {
 
   onDatesChange = ({ startDate, endDate }) => {
     this.setState({
-      dates: {
-        startDate,
-        endDate
-      }
+      dates: { startDate, endDate }
     });
   };
 
@@ -79,8 +75,6 @@ export default class Dates extends React.Component {
   onApply = () => this.props.onApply({ dates: this.state.dates });
 
   onReset = () => this.setState({ dates: { startDate: null, endDate: null } });
-
-  isReset = () => this.props.isReset();
 
   render() {
     return (
@@ -109,9 +103,9 @@ export default class Dates extends React.Component {
               startDate={this.state.dates.startDate}
               endDate={this.state.dates.endDate}
               hideKeyboardShortcutsPanel={true}
-              numberOfMonths={12}
+              numberOfMonths={2}
               orientation="vertical"
-              verticalHeight={568}
+              verticalHeight={560}
               isOutsideRange={day => day.isBefore(moment(), "day")}
               focusedInput={this.state.focusedInput}
               onDatesChange={this.onDatesChange}
