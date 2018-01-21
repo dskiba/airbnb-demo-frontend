@@ -1,32 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import { Container } from "../../UI/index";
 
 import Dates from "./Dates";
 import Guests from "./Guests";
 
 const Filters = styled.div`
-  position: fixed;
   padding: 12px 8px;
-  top: 80px;
   right: 0;
   left: 0;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  align-content: flex-start;
-  background: #fff;
-  box-shadow: 0 0 0.5px rgba(72, 72, 72, 0.3);
   z-index: 10px;
-  & > .container {
-    margin: 0;
-  }
-  @media (min-width: 576px) {
-    & > .container {
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
+
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
 `;
 
 export default class Filter extends React.Component {
@@ -61,7 +52,7 @@ export default class Filter extends React.Component {
     return (
       <Filters>
         <Grid>
-          <Row>
+          <Row start="xs">
             <Dates
               dates={this.state.dates}
               isOpen={this.state.openedFilter === "dates"}

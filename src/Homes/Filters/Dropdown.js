@@ -3,8 +3,11 @@ import styled from "styled-components";
 import closeIcon from "./plus.svg";
 import arrow from "./arrow.svg";
 
+const BtnContainer = styled.div`
+  display: inline-block;
+`;
+
 const Filter = styled.button`
-  margin-left: 8px;
   margin-right: 12px;
   padding: 7px 16px;
   display: ${props => (props.showLg ? "none" : "inline-block")};
@@ -147,7 +150,7 @@ const Overflow = styled.div`
 
 export default function(props) {
   return (
-    <div>
+    <BtnContainer>
       <Filter
         onClick={props.onClick}
         isOpen={props.isOpen}
@@ -185,6 +188,6 @@ export default function(props) {
           </DropDownWrapper>
         </div>
       )}
-    </div>
+    </BtnContainer>
   );
 }

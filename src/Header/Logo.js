@@ -10,7 +10,7 @@ const Logo = styled.div`
 `;
 
 const Img = styled.img`
-  margin-top: 9px;
+  margin-top: 8px;
   height: 32px;
   width: 32px;
 `;
