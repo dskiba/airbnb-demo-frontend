@@ -71,7 +71,7 @@ const Clear = styled.button`
   color: #0f7276;
 `;
 
-const ConfirmButton = styled.button`
+const Button = styled.button`
   display: none;
   @media screen and (min-width: 576px) {
     display: block;
@@ -87,6 +87,10 @@ const ConfirmButton = styled.button`
     color: ${props => (props.isPrimary ? "#008489" : "#636363")};
   }
 `;
+
+const Apply = Button.extend``;
+const Cancel = Button.extend``;
+const Reset = Button.extend``;
 
 const MobileButton = styled.button`
   padding: 12px 132px;
@@ -173,14 +177,14 @@ export default function(props) {
             {props.children}
             <Footer>
               {props.isCancelOrReset ? (
-                <ConfirmButton onClick={props.onClick}>Cancel</ConfirmButton>
+                <Cancel onClick={props.onClick}>Cancel</Cancel>
               ) : (
-                <ConfirmButton onClick={props.onReset}>Reset</ConfirmButton>
+                <Reset onClick={props.onReset}>Reset</Reset>
               )}
 
-              <ConfirmButton onClick={props.onApply} isPrimary>
+              <Apply onClick={props.onApply} isPrimary>
                 Apply
-              </ConfirmButton>
+              </Apply>
               <MobileButton onClick={props.onApply}>Save</MobileButton>
             </Footer>
           </DropDownWrapper>

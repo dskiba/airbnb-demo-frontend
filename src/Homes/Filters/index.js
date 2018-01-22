@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import { Container } from "../../UI/index";
 
 import Dates from "./Dates";
 import Guests from "./Guests";
@@ -33,14 +32,10 @@ export default class Filter extends React.Component {
   };
 
   toggle = key => {
-    this.setState(
-      prevState =>
-        prevState.openedFilter === key
-          ? { openedFilter: null }
-          : { openedFilter: key }
-    );
+    this.setState(prevState => ({
+      openedFilter: prevState.openedFilter === key ? null : key
+    }));
   };
-  // { openedFilter: prevState.openedFilter === key ? x : y }
 
   onApply = () => {
     this.setState({ openedFilter: null });

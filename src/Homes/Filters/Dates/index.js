@@ -44,12 +44,6 @@ const getTitle = ({ startDate, endDate }) => {
   return `${getStartDate(startDate)} - ${getEndDate(endDate)}`;
 };
 
-// {
-//   props.activeTitle && (props.isOpen || props.isActive)
-//     ? props.activeTitle
-//     : props.name;
-// }
-
 export default class Dates extends React.Component {
   initialValues = {
     dates: {
