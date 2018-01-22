@@ -7,8 +7,17 @@ import Logo from "./Logo";
 
 const Header = styled.header`
   text-align: center;
-  margin-top: 16px;
-  border-bottom: 1px solid #eee;
+  padding-top: 16px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0.5px 0 rgba(72, 72, 72, 0.3);
+  }
 `;
 
 const SearchFrom = styled.form`
@@ -42,16 +51,16 @@ const SearchInput = styled.input`
   }
 `;
 
-export default () => (
+export default props => (
   <Header>
     <Grid>
-      <Row>
+      <Row start="xs">
         <Logo />
         <SearchFrom>
           <SearchInput
             type="text"
             name="search"
-            placeholder="Try &quot;Miami&quot;"
+            placeholder={props.placeholder}
           />
         </SearchFrom>
         <Navigation />
