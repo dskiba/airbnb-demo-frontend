@@ -12,6 +12,7 @@ const Wrapper = styled.section`
     right: 0;
     bottom: 0;
     width: 33%;
+    z-index: -1;
   }
 `;
 

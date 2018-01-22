@@ -10,12 +10,9 @@ const Filters = styled.div`
   padding: 12px 8px;
   right: 0;
   left: 0;
-  z-index: 10px;
-
   position: fixed;
   top: 80px;
   width: 100%;
-  z-index: 1;
   background: #fff;
   box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
 `;
@@ -35,7 +32,7 @@ export default class Filter extends React.Component {
     }
   };
 
-  toggleFilter = key => {
+  toggle = key => {
     this.setState(
       prevState =>
         prevState.openedFilter === key
@@ -43,9 +40,10 @@ export default class Filter extends React.Component {
           : { openedFilter: key }
     );
   };
+  // { openedFilter: prevState.openedFilter === key ? x : y }
 
-  onApply = values => {
-    this.setState({ openedFilter: null, ...values });
+  onApply = () => {
+    this.setState({ openedFilter: null });
   };
 
   render() {
@@ -56,13 +54,13 @@ export default class Filter extends React.Component {
             <Dates
               dates={this.state.dates}
               isOpen={this.state.openedFilter === "dates"}
-              onClick={() => this.toggleFilter("dates")}
+              onClick={() => this.toggle("dates")}
               onApply={this.onApply}
             />
             <Guests
               guests={this.state.guests}
               isOpen={this.state.openedFilter === "guests"}
-              onClick={() => this.toggleFilter("guests")}
+              onClick={() => this.toggle("guests")}
               onApply={this.onApply}
             />
           </Row>

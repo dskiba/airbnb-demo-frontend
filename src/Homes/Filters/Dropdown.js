@@ -157,9 +157,7 @@ export default function(props) {
         isActive={props.isActive}
         showLg={props.showLg}
       >
-        {props.activeTitle && (props.isOpen || props.isActive)
-          ? props.activeTitle
-          : props.name}
+        {props.activeTitle && props.isActive ? props.activeTitle : props.name}
       </Filter>
       {props.isOpen && (
         <div>
@@ -174,7 +172,7 @@ export default function(props) {
             </Header>
             {props.children}
             <Footer>
-              {props.isReset ? (
+              {props.isCancelOrReset ? (
                 <ConfirmButton onClick={props.onClick}>Cancel</ConfirmButton>
               ) : (
                 <ConfirmButton onClick={props.onReset}>Reset</ConfirmButton>

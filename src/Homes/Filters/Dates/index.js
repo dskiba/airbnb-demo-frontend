@@ -4,17 +4,13 @@ import styled from "styled-components";
 import "react-dates/initialize";
 import { DayPickerRangeController } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
-import "./react_dates_overrides.css";
+import "./ReactDates.css";
 import moment from "moment";
-import Responsive from "react-responsive";
 import isEqual from "lodash/isEqual";
 
+import { Sm, Md, Lg } from "../../../UI/Responsive";
 import Dropdown from "../Dropdown";
 import arrow from "../arrow.svg";
-
-const Lg = props => <Responsive {...props} minWidth={992} />;
-const Md = props => <Responsive {...props} minWidth={576} maxWidth={991} />;
-const Sm = props => <Responsive {...props} maxWidth={575} />;
 
 const Calendar = styled.div``;
 
@@ -45,8 +41,14 @@ const getStartDate = date => (date ? date.format("MMM Do") : "Check in");
 const getEndDate = date => (date ? date.format("MMM Do") : "Check out");
 
 const getTitle = ({ startDate, endDate }) => {
-  return getStartDate(startDate) + " - " + getEndDate(endDate);
+  return `${getStartDate(startDate)} - ${getEndDate(endDate)}`;
 };
+
+// {
+//   props.activeTitle && (props.isOpen || props.isActive)
+//     ? props.activeTitle
+//     : props.name;
+// }
 
 export default class Dates extends React.Component {
   initialValues = {
@@ -54,8 +56,7 @@ export default class Dates extends React.Component {
       startDate: null,
       endDate: null
     },
-    focusedInput: "startDate",
-    isTouchDevice: true
+    focusedInput: "startDate"
   };
 
   state = this.initialValues;
@@ -86,7 +87,7 @@ export default class Dates extends React.Component {
         onClick={this.props.onClick}
         onApply={this.onApply}
         onReset={this.onReset}
-        isReset={isEqual(this.state.dates, this.initialValues.dates)}
+        isCancelOrReset={isEqual(this.state.dates, this.initialValues.dates)}
       >
         <Calendar>
           <Sm>
