@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import magnifier from "../assets/magnifier.svg";
-import Navigation from "./Navigation";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import Logo from "./Logo";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row } from 'react-flexbox-grid';
+
+import magnifier from '../assets/magnifier.svg';
+import Navigation from './Navigation';
+import Logo from './Logo';
 
 const Header = styled.header`
   text-align: center;
@@ -57,11 +58,7 @@ export default props => (
       <Row start="xs">
         <Logo />
         <SearchFrom>
-          <SearchInput
-            type="text"
-            name="search"
-            placeholder={props.placeholder}
-          />
+          <SearchInput type="text" name="search" placeholder={props.placeholder} />
         </SearchFrom>
         <Navigation />
       </Row>

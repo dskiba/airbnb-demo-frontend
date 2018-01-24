@@ -1,15 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import { Link, Img, CardName } from "../../UI/index";
-import Stars from "../../UI/Stars/index";
-import img1 from "./1.png";
-import img2 from "./2.png";
-import img3 from "./3.png";
+import React from 'react';
+import styled from 'styled-components';
+import { Link, Img } from '../../UI/index';
 
 const Category = styled.span`
   display: block;
-  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 8px;
   line-hight: 9px;
   font-weight: bold;
@@ -24,7 +19,7 @@ const Category = styled.span`
 
 const ReservationName = styled.h3`
   display: block;
-  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-hight: 16px;
   margin-top: 2px;
@@ -38,8 +33,7 @@ const ReservationName = styled.h3`
 
 const Check = styled.span`
   display: block;
-  font-family: "Circular Air Light", Helvetica Neue, Helvetica, Arial,
-    sans-serif;
+  font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-hight: 14px;
   color: #383838;
@@ -51,15 +45,13 @@ const Check = styled.span`
   }
 `;
 
-export default props => {
-  return (
-    <React.Fragment>
-      <Link to={props.link}>
-        <Img src={props.imgSrc} alt={props.imgAlt} />
-        <Category> {props.category} </Category>
-        <ReservationName>{props.name}</ReservationName>
-        <Check>About ${props.check} per person</Check>
-      </Link>
-    </React.Fragment>
-  );
-};
+export default props => (
+  <React.Fragment>
+    <Link to={props.link}>
+      <Img src={props.imgSrc} alt={props.imgAlt} />
+      <Category> {props.category} </Category>
+      <ReservationName>{props.name}</ReservationName>
+      <Check>About ${props.check} per person</Check>
+    </Link>
+  </React.Fragment>
+);

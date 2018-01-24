@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import facebook from "./facebook.svg";
-import twitter from "./twitter.svg";
-import instagram from "./instagram.svg";
+import React from 'react';
+import styled from 'styled-components';
+import facebook from './facebook.svg';
+import twitter from './twitter.svg';
+import instagram from './instagram.svg';
 
 const SideNav = styled.nav`
   display: flex;
@@ -51,16 +51,14 @@ const Instagram = SocialIcon.extend`
   background-image: url(${instagram});
 `;
 
-export default () => {
-  return (
-    <SideNav>
-      <Link href="/">Terms</Link>
-      <Link href="/">Privacy</Link>
-      <Link href="/">Site map</Link>
+export default () => (
+  <SideNav>
+    <Link href="/">Terms</Link>
+    <Link href="/">Privacy</Link>
+    <Link href="/">Site map</Link>
 
-      <Facebook href="facebook.com" />
-      <Twitter href="twitter.com" />
-      <Instagram href="instagram.com" />
-    </SideNav>
-  );
-};
+    <Facebook href="facebook.com" />
+    <Twitter href="twitter.com" />
+    <Instagram href="instagram.com" />
+  </SideNav>
+);

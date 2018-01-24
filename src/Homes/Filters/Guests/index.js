@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Responsive from "react-responsive";
-import isEqual from "lodash/isEqual";
+import Responsive from 'react-responsive';
+import isEqual from 'lodash/isEqual';
 
-import Dropdown from "../Dropdown";
-import Counter from "./Count";
+import Dropdown from '../Dropdown';
+import Counter from './Count';
 
 const Lg = props => <Responsive {...props} minWidth={992} />;
 const Md = props => <Responsive {...props} minWidth={576} maxWidth={991} />;

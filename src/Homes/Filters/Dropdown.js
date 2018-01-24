@@ -1,7 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import closeIcon from "./plus.svg";
-import arrow from "./arrow.svg";
+import React from 'react';
+import styled from 'styled-components';
+import closeIcon from './plus.svg';
 
 const BtnContainer = styled.div`
   display: inline-block;
@@ -10,13 +9,12 @@ const BtnContainer = styled.div`
 const Filter = styled.button`
   margin-right: 12px;
   padding: 7px 16px;
-  display: ${props => (props.showLg ? "none" : "inline-block")};
-  background-color: ${props =>
-    props.isOpen || props.isActive ? "#008489" : "#fff"};
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: ${props => (props.showLg ? 'none' : 'inline-block')};
+  background-color: ${props => (props.isOpen || props.isActive ? '#008489' : '#fff')};
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: ${props => (props.isOpen || props.isActive ? "#fff" : "#383838")};
+  color: ${props => (props.isOpen || props.isActive ? '#fff' : '#383838')};
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
   cursor: pointer;
@@ -66,7 +64,7 @@ const Title = styled.p`
 const Clear = styled.button`
   border: none;
   background-color: #fff;
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #0f7276;
 `;
@@ -79,12 +77,12 @@ const Button = styled.button`
     width: 110px;
     height: 64px;
     box-sizing: border-box;
-    font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
     background-color: #fff;
     border: none;
-    color: ${props => (props.isPrimary ? "#008489" : "#636363")};
+    color: ${props => (props.isPrimary ? '#008489' : '#636363')};
   }
 `;
 
@@ -94,7 +92,7 @@ const Reset = Button.extend``;
 
 const MobileButton = styled.button`
   padding: 12px 132px;
-  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: bold;
@@ -105,18 +103,6 @@ const MobileButton = styled.button`
   @media screen and (min-width: 576px) {
     display: none;
   }
-`;
-
-const Input = styled.input`
-  font-weight: 200;
-  font-size: 18px;
-  border: none;
-  border-bottom: ${props => (props.isActive ? "1px solid #008489" : "none")};
-  color: ${props => (props.isActive ? "#0F7276" : "#636363")};
-`;
-const Arrow = styled.img`
-  margin-left: 16px;
-  margin-right: 16px;
 `;
 
 const DropDownWrapper = styled.div`
@@ -152,7 +138,7 @@ const Overflow = styled.div`
   background-color: rgba(255, 255, 255, 0.75);
 `;
 
-export default function(props) {
+export default function (props) {
   return (
     <BtnContainer>
       <Filter
@@ -170,9 +156,7 @@ export default function(props) {
             <Header>
               <Close onClick={props.onClick} />
               <Title>{props.name}</Title>
-              <Clear onClick={props.onClick}>
-                {props.clearTitle || "Reset"}
-              </Clear>
+              <Clear onClick={props.onClick}>{props.clearTitle || 'Reset'}</Clear>
             </Header>
             {props.children}
             <Footer>

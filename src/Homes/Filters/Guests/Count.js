@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Counter = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ const Num = styled.span`
   line-height: 21px;
 `;
 
-export default function(props) {
+export default function (props) {
   return (
     <Counter>
       <Button>

@@ -1,9 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import img1 from "./1.png";
-import img2 from "./2.png";
-import img3 from "./3.png";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Card = styled(Link)`
   display: block;
@@ -20,7 +17,7 @@ const Card = styled(Link)`
 `;
 
 const Title = styled.h3`
-  font-family: "Circular Air Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: normal;
   color: #383838;
@@ -56,11 +53,9 @@ const Img = styled.img`
   }
 `;
 
-export default props => {
-  return (
-    <Card to={props.link}>
-      <Img src={props.imgSrc} alt={props.imgAlt} />
-      <Title>{props.title}</Title>
-    </Card>
-  );
-};
+export default props => (
+  <Card to={props.link}>
+    <Img src={props.imgSrc} alt={props.imgAlt} />
+    <Title>{props.title}</Title>
+  </Card>
+);

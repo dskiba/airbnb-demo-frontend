@@ -1,5 +1,5 @@
-import React from "react";
-import Responsive from "react-responsive";
+import React from 'react';
+import Responsive from 'react-responsive';
 
 export const Md = props => (
   <Responsive {...props} minWidth={576} maxWidth={991} />

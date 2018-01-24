@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import star from "./star.svg";
+import React from 'react';
+import styled from 'styled-components';
+import star from './star.svg';
 
 const Stars = styled.div`
   display: inline-block;
@@ -16,14 +16,12 @@ const Star = styled.span`
   background-size: cover;
 `;
 
-export default () => {
-  return (
-    <Stars>
-      <Star />
-      <Star />
-      <Star />
-      <Star />
-      <Star />
-    </Stars>
-  );
-};
+export default () => (
+  <Stars>
+    <Star />
+    <Star />
+    <Star />
+    <Star />
+    <Star />
+  </Stars>
+);

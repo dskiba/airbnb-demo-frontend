@@ -1,5 +1,5 @@
-import React from "react";
-import { Form, Select, Option } from "./styled";
+import React from 'react';
+import { Form, Select, Option } from './styled';
 
 const Currency = Form.extend`
   margin-top: 48px;
@@ -8,15 +8,13 @@ const Currency = Form.extend`
   }
 `;
 
-export default () => {
-  return (
-    <Currency>
-      <Select name="currency">
-        <Option value="English" selected>
+export default () => (
+  <Currency>
+    <Select name="currency">
+      <Option value="English" selected>
           United States dollar
-        </Option>
-        <Option value="Russian">Rubles</Option>
-      </Select>
-    </Currency>
-  );
-};
+      </Option>
+      <Option value="Russian">Rubles</Option>
+    </Select>
+  </Currency>
+);
