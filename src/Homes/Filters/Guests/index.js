@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import Responsive from 'react-responsive';
 import isEqual from 'lodash/isEqual';
 
 import Dropdown from '../Dropdown';
 import Counter from './Count';
-
-const Lg = props => <Responsive {...props} minWidth={992} />;
-const Md = props => <Responsive {...props} minWidth={576} maxWidth={991} />;
-const Sm = props => <Responsive {...props} maxWidth={575} />;
 
 const Filters = styled.div`
   height: 100vh;
@@ -35,7 +29,7 @@ const Filter = styled.div`
 
 const Title = styled.p`
   margin: 0;
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   flex-grow: 2;
@@ -48,8 +42,7 @@ const Title = styled.p`
 const Specifically = styled.p`
   margin: 0;
   padding-top: 8px;
-  font-family: "Circular Air Light", Helvetica Neue, Helvetica, Arial,
-    sans-serif;
+  font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
   @media screen and (min-width: 576px) {
@@ -73,23 +66,31 @@ const Button = styled.button`
   }
 `;
 
-const Num = styled.div`
-  width: 48px;
-  font-weight: 200;
-  font-size: 18px;
-  text-align: center;
-`;
+const getTitle = ({ adults, children, infants }) =>
+  `${adults + children} guests ${infants ? `, ${infants} infants` : ''}`;
 
 export default class Guests extends React.Component {
-  // initialValues = {};
+  initialValues = {
+    guests: {
+      adults: 1,
+      children: 0,
+      infants: 0,
+    },
+  };
 
-  // state = this.initialValues;
+  state = this.initialValues;
 
-  // onClick = () => ;
+  onClick = (key, guest) =>
+    this.setState(prevState => ({
+      guests: {
+        ...prevState.guests,
+        [key]: prevState.guests[key] + guest,
+      },
+    }));
 
-  // onChange = () = => ;
+  onApply = () => this.props.onApply({ guests: this.state.guests });
 
-  // onApply = () => ;
+  onReset = () => this.setState({ guests: { adults: 1, children: 0, infants: 0 } });
 
   render() {
     return (
@@ -97,28 +98,31 @@ export default class Guests extends React.Component {
         name="Guests"
         isOpen={this.props.isOpen}
         isActive={!isEqual(this.state, this.initialValues)}
+        activeTitle={getTitle(this.state.guests)}
         mobileTitle="Save"
         onClick={this.props.onClick}
         onApply={this.onApply}
+        onReset={this.onReset}
+        isCancelOrReset={isEqual(this.state.guests, this.initialValues.guests)}
       >
         <Filters>
           <Filter>
             <Title>Adults</Title>
-            <Counter name="adults" onClick={this.onClick} />
+            <Counter name="adults" onClick={this.onClick} value={this.state.guests.adults} />
           </Filter>
           <Filter>
             <div>
               <Title>Children</Title>
               <Specifically>Ages 2 — 12</Specifically>
             </div>
-            <Counter name="children" onClick={this.onClick} />
+            <Counter name="children" value={this.state.guests.children} onClick={this.onClick} />
           </Filter>
           <Filter>
             <div>
               <Title>Infants</Title>
               <Specifically>Under 2</Specifically>
             </div>
-            <Counter name="infants" onClick={this.onClick} />
+            <Counter name="infants" value={this.state.guests.infants} onClick={this.onClick} />
           </Filter>
         </Filters>
       </Dropdown>

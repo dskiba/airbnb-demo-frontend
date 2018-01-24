@@ -23,6 +23,7 @@ const Button = styled.button`
 `;
 
 const Num = styled.span`
+  width: 20px;
   margin-left: 19px;
   margin-right: 19px;
   text-align: center;
@@ -33,11 +34,11 @@ const Num = styled.span`
 export default function (props) {
   return (
     <Counter>
-      <Button>
+      <Button disabled={props.value <= 0} onClick={() => props.onClick(props.name, -1)}>
         <span>-</span>
       </Button>
-      <Num>0</Num>
-      <Button>
+      <Num>{props.value}</Num>
+      <Button onClick={() => props.onClick(props.name, +1)}>
         <span>+</span>
       </Button>
     </Counter>
