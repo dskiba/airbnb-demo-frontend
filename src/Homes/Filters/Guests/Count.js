@@ -34,7 +34,7 @@ const Num = styled.span`
 export default function (props) {
   return (
     <Counter>
-      <Button disabled={props.value <= 0} onClick={() => props.onClick(props.name, -1)}>
+      <Button disabled={props.value <= props.min} onClick={() => props.onClick(props.name, -1)}>
         <span>-</span>
       </Button>
       <Num>{props.value}</Num>

@@ -88,6 +88,12 @@ export default class Guests extends React.Component {
       },
     }));
 
+  // toggle = (key) => {
+  //   this.setState(prevState => ({
+  //     openedFilter: prevState.openedFilter === key ? null : key,
+  //   }));
+  // };
+
   onApply = () => this.props.onApply({ guests: this.state.guests });
 
   onReset = () => this.setState({ guests: { adults: 1, children: 0, infants: 0 } });
@@ -108,21 +114,36 @@ export default class Guests extends React.Component {
         <Filters>
           <Filter>
             <Title>Adults</Title>
-            <Counter name="adults" onClick={this.onClick} value={this.state.guests.adults} />
+            <Counter
+              name="adults"
+              onClick={this.onClick}
+              min={this.initialValues.guests.adults}
+              value={this.state.guests.adults}
+            />
           </Filter>
           <Filter>
             <div>
               <Title>Children</Title>
               <Specifically>Ages 2 — 12</Specifically>
             </div>
-            <Counter name="children" value={this.state.guests.children} onClick={this.onClick} />
+            <Counter
+              name="children"
+              value={this.state.guests.children}
+              min={this.initialValues.guests.adults}
+              onClick={this.onClick}
+            />
           </Filter>
           <Filter>
             <div>
               <Title>Infants</Title>
               <Specifically>Under 2</Specifically>
             </div>
-            <Counter name="infants" value={this.state.guests.infants} onClick={this.onClick} />
+            <Counter
+              name="infants"
+              value={this.state.guests.infants}
+              min={this.initialValues.guests.adults}
+              onClick={this.onClick}
+            />
           </Filter>
         </Filters>
       </Dropdown>
