@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Col } from 'react-flexbox-grid';
-import { Slider, Title } from '../../UI/index';
+import { Slider, Title } from '../../UI';
 import Card from './Card';
 import HomesImg from './1.png';
 import ExperiencesImg from './2.png';

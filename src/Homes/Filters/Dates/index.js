@@ -67,7 +67,7 @@ export default class Dates extends React.Component {
 
   onApply = () => this.props.onApply({ dates: this.state.dates });
 
-  onReset = () => this.setState({ dates: { startDate: null, endDate: null } });
+  onReset = () => this.setState(this.initialValues);
 
   render() {
     return (

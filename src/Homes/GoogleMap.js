@@ -34,7 +34,7 @@ class GoogleMap extends React.Component {
       <Wrapper>
         <GoogleMapReact
           bootstrapURLKeys={{
-            key: process.env.REACT_APP_SECRET_CODE,
+            key: process.env.REACT_APP_GOOGLEMAP_CODE,
           }}
           center={this.props.center}
           zoom={this.props.zoom}

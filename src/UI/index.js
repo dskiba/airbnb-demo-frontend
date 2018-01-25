@@ -94,7 +94,7 @@ export const SliderArrow = styled.button`
     box-shadow: 0 0.125rem 0.25rem rgba(72, 72, 72, 0.16);
     border-radius: 20px;
     cursor: pointer;
-    z-index: 3;
+    z-index: 1;
     transform: rotate(-90deg);
   }
 `;

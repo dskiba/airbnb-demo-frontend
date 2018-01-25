@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
-import { Title, Slider, SliderArrow } from '../../UI/index';
+import { Title, Slider, SliderArrow } from '../../UI';
 import Card from './Card';
 import Paris from './Paris.png';
 import Miami from './Miami.png';

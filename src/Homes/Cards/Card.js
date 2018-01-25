@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, Img, CardName, CardPrice, Reviews } from '../../UI/index';
-import Stars from '../../UI/Stars/index';
+import { Link, Img, CardName, CardPrice, Reviews } from '../../UI';
+import Stars from '../../UI/Stars';
 
 const Title = CardName.extend`
   font-size: 15px;

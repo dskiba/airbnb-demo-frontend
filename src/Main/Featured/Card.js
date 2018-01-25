@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Img, CardName } from '../../UI/index';
+import { Link, Img, CardName } from '../../UI';
 
 const City = CardName.extend`
   font-weight: bold;

@@ -15,7 +15,7 @@ const Main = styled.main``;
 export default () => (
   <React.Fragment>
     <Helmet>
-      <title>Airbnb Main Page</title>
+      <title>Airbnb Main Page.</title>
     </Helmet>
     <Header placeholder="Try &quot;Miami&quot;" />
     <Main>

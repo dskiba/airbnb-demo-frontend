@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, Img, CardName, CardPrice, Reviews } from '../../UI/index';
-import Stars from '../../UI/Stars/index';
+import { Link, Img, CardName, CardPrice, Reviews } from '../../UI';
+import Stars from '../../UI/Stars';
 
 const Title = CardName.extend``;
 const Price = CardPrice.extend``;

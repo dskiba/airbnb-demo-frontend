@@ -26,8 +26,13 @@ const Footer = styled.div`
   justify-content: center;
   position: absolute;
   bottom: 16px;
+  margin-top: 8px;
   width: 100%;
+  border-top: 1px solid rgba(72, 72, 72, 0.3);
+  z-index: 111;
   @media screen and (min-width: 576px) {
+    border: none;
+    box-shadow: none;
     justify-content: space-between;
     position: relative;
   }
@@ -39,6 +44,7 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
+
   @media screen and (min-width: 576px) {
     display: none;
   }
@@ -91,6 +97,8 @@ const Cancel = Button.extend``;
 const Reset = Button.extend``;
 
 const MobileButton = styled.button`
+  position: fixed;
+  bottom: 8px;
   padding: 12px 132px;
   font-family: 'Circular Air Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -112,6 +120,7 @@ const DropDownWrapper = styled.div`
   right: 0;
   bottom: 0;
   background-color: #fff;
+  z-index: 200;
   @media screen and (min-width: 576px) {
     position: absolute;
     top: 100%;
@@ -119,7 +128,6 @@ const DropDownWrapper = styled.div`
     left: auto;
     bottom: auto;
     background-color: #fff;
-    padding: 24px 16px 0 16px;
     display: inline-block;
     background: #ffffff;
     border: 1px solid rgba(72, 72, 72, 0.2);

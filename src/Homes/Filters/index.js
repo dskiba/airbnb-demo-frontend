@@ -6,14 +6,16 @@ import Dates from './Dates';
 import Guests from './Guests';
 
 const Filters = styled.div`
+  margin-top: 80.4px;
   padding: 12px 8px;
   right: 0;
   left: 0;
   position: fixed;
-  top: 80px;
   width: 100%;
   background: #fff;
-  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
+  border-top: 0.5px solid rgba(72, 72, 72, 0.3);
+  border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
+  z-index: 2;
 `;
 
 export default class Filter extends React.Component {

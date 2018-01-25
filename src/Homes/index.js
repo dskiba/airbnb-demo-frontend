@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
 
-import Filters from './Filters/index';
-import Cards from './Cards/index';
+import Filters from './Filters';
+import Cards from './Cards';
 import Header from '../Header';
 
 const Homes = styled.main``;

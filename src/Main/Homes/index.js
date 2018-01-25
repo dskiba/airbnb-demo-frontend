@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
 import { Link as RouteLink } from 'react-router-dom';
 
-import { Title, Slider, SliderArrow, SeeAll } from '../../UI/index';
+import { Title, Slider, SliderArrow, SeeAll } from '../../UI';
 import Card from './Card';
 import img1 from '../../Homes/Cards/1.png';
 import img2 from '../../Homes/Cards/2.png';

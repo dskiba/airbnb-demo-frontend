@@ -10,10 +10,10 @@ const Filters = styled.div`
   padding-top: 28px;
   @media screen and (min-width: 576px) {
     padding-top: 0px;
-    width: 294px;
     height: auto;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 24px;
+    padding-right: 15px;
+    margin-top: 30px;
   }
 `;
 
@@ -21,21 +21,23 @@ const Filter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-bottom: 23px;
+  margin-left: 8px;
+  @media screen and (min-width: 576px) {
+    margin-left: 0px;
+  }
 `;
 
 const Title = styled.p`
   margin: 0;
+  margin-right: 85px;
   font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   flex-grow: 2;
   @media screen and (min-width: 576px) {
     font-size: 20px;
-    line-hight: 23px;
+    line-height: 23px;
   }
 `;
 
@@ -47,22 +49,6 @@ const Specifically = styled.p`
   line-height: 16px;
   @media screen and (min-width: 576px) {
     font-size: 16px;
-  }
-`;
-
-const Button = styled.button`
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #008489;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #008489;
-  cursor: pointer;
-  &:disabled {
-    opacity: 0.5;
   }
 `;
 
@@ -88,15 +74,9 @@ export default class Guests extends React.Component {
       },
     }));
 
-  // toggle = (key) => {
-  //   this.setState(prevState => ({
-  //     openedFilter: prevState.openedFilter === key ? null : key,
-  //   }));
-  // };
-
   onApply = () => this.props.onApply({ guests: this.state.guests });
 
-  onReset = () => this.setState({ guests: { adults: 1, children: 0, infants: 0 } });
+  onReset = () => this.setState(this.initialValues);
 
   render() {
     return (
@@ -129,7 +109,7 @@ export default class Guests extends React.Component {
             <Counter
               name="children"
               value={this.state.guests.children}
-              min={this.initialValues.guests.adults}
+              min={this.initialValues.guests.children}
               onClick={this.onClick}
             />
           </Filter>
@@ -141,7 +121,7 @@ export default class Guests extends React.Component {
             <Counter
               name="infants"
               value={this.state.guests.infants}
-              min={this.initialValues.guests.adults}
+              min={this.initialValues.guests.infants}
               onClick={this.onClick}
             />
           </Filter>

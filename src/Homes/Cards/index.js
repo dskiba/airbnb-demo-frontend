@@ -12,7 +12,7 @@ import img6 from './6.png';
 import GoogleMap from '../GoogleMap';
 
 const Cards = styled.section`
-  margin-top: 146px;
+  padding-top: 146px;
 `;
 
 export default () => (
