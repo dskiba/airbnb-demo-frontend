@@ -9,7 +9,7 @@ const BtnContainer = styled.div`
 const Filter = styled.button`
   margin-right: 12px;
   padding: 7px 16px;
-  display: ${props => (props.showLg ? 'none' : 'inline-block')};
+  display: ${props => (props.hideSm ? 'none' : 'inline-block')};
   background-color: ${props => (props.isOpen || props.isActive ? '#008489' : '#fff')};
   font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -31,6 +31,7 @@ const Footer = styled.div`
   border-top: 1px solid rgba(72, 72, 72, 0.3);
   z-index: 111;
   @media screen and (min-width: 576px) {
+    bottom: 0;
     border: none;
     box-shadow: none;
     justify-content: space-between;
@@ -153,7 +154,7 @@ export default function (props) {
         onClick={props.onClick}
         isOpen={props.isOpen}
         isActive={props.isActive}
-        showLg={props.showLg}
+        hideSm={props.hideSm}
       >
         {props.activeTitle && props.isActive ? props.activeTitle : props.name}
       </Filter>

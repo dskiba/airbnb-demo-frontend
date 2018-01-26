@@ -4,6 +4,7 @@ import { Grid, Row } from 'react-flexbox-grid';
 
 import Dates from './Dates';
 import Guests from './Guests';
+import RoomType from './RoomType';
 
 const Filters = styled.div`
   margin-top: 80.4px;
@@ -29,6 +30,11 @@ export default class Filter extends React.Component {
       adults: 1,
       children: 0,
       infants: 0,
+    },
+    roomtype: {
+      entire: false,
+      privat: false,
+      shared: false,
     },
   };
 
@@ -57,6 +63,12 @@ export default class Filter extends React.Component {
               guests={this.state.guests}
               isOpen={this.state.openedFilter === 'guests'}
               onClick={() => this.toggle('guests')}
+              onApply={this.onApply}
+            />
+            <RoomType
+              roomtype={this.state.roomtype}
+              isOpen={this.state.openedFilter === 'roomtype'}
+              onClick={() => this.toggle('roomtype')}
               onApply={this.onApply}
             />
           </Row>
