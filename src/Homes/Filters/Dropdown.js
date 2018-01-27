@@ -129,7 +129,7 @@ const DropDownWrapper = styled.div`
   right: 0;
   bottom: 0;
   background-color: #fff;
-  z-index: 200;
+  z-index: 61;
   @media screen and (min-width: 576px) {
     position: absolute;
     top: 100%;
@@ -153,6 +153,7 @@ export const Overflow = styled.div`
   left: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.75);
+  z-index: 1;
 `;
 
 export default function (props) {

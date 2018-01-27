@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import Filters from './Filters';
 import Cards from './Cards';
 import Header from '../Header';
+import GoogleMap from './GoogleMap';
 
 const Homes = styled.main``;
 
@@ -18,5 +19,6 @@ export default () => (
     <Homes>
       <Cards />
     </Homes>
+    <GoogleMap />
   </React.Fragment>
 );

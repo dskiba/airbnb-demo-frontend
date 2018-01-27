@@ -54,7 +54,7 @@ const TextWrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 23px;
   @media screen and (min-width: 991px) {

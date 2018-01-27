@@ -24,7 +24,7 @@
   background-color: #fff;
   border: 1px solid #008489;
   border-radius: 50%;
-  z-index: 2;
+  z-index: 20;
 }
 
 .rheostat-horizontal {

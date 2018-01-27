@@ -60,6 +60,7 @@ export default class Price extends React.Component {
           max={this.state.max}
           min={this.state.min}
           onChange={this.onChange}
+          title={this.props.title}
         />
       </Dropdown>
     );

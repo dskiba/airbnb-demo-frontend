@@ -4,13 +4,12 @@ import Rheostat from 'rheostat';
 import Diagram from './Diagram';
 
 const Prices = styled.div`
-    box-sizing: border-box;
     
     padding-top: 24px;
-    padding-left: 16px;
-    padding-right: 16px;
   }
   @media screen and (min-width: 991px) {
+    padding-left: 16px;
+    padding-right: 16px;
     width: 326px;
   }
 `;
@@ -18,6 +17,9 @@ const Prices = styled.div`
 const Title = styled.h3`
   margin: 0;
   margin-bottom: 23px;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
   @media screen and (min-width: 576px) {
   }
 `;
@@ -40,16 +42,16 @@ const Annotation = styled.p`
 `;
 
 const Histogram = styled.div`
+  padding-left: 16px;
+  padding-right: 24px;
   @media screen and (min-width: 576px) {
-    padding-left: 16px;
-    padding-right: 24px;
   }
 `;
 
 export default function (props) {
   return (
     <Prices>
-      <Title>Price range</Title>
+      <Title>{props.title}</Title>
       <Name>
         ${props.prices.startPrice} — ${props.prices.endPrice}+
       </Name>

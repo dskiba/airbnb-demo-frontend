@@ -9,7 +9,6 @@ import img3 from './3.png';
 import img4 from './4.png';
 import img5 from './5.png';
 import img6 from './6.png';
-import GoogleMap from '../GoogleMap';
 
 const Cards = styled.section`
   padding-top: 146px;
@@ -90,7 +89,6 @@ export default () => (
           </Row>
 
           <Pagination />
-          <GoogleMap />
         </Col>
       </Row>
     </Grid>

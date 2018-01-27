@@ -17,10 +17,14 @@ const MoreFiltersStyled = styled.div`
 
 const Content = styled.div`
   padding-top: 8px;
+  @media screen and (min-width: 576px) {
+    margin-left: -8px;
+  }
 `;
 
 const Filter = styled.div`
-  padding: 32px 8px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
   background-color: #fff;
   @media screen and (min-width: 991px) {
@@ -29,6 +33,35 @@ const Filter = styled.div`
 `;
 
 const min = 0;
+
+const activeFilters = [
+  'roomtype',
+  'prices',
+  'roomsAndBeds',
+  'amenities',
+  'facilities',
+  'instantBook',
+  'superhost',
+];
+
+const getChangedCount = (state, initial) =>
+  activeFilters.reduce(
+    (count, key) =>
+      (Object.keys(state[key]).length > 2
+        ? count + getObjectCount(state[key])
+        : count + getSimpleCount(state[key], initial[key])),
+    0,
+  );
+
+const getObjectCount = object =>
+  Object.keys(object).reduce((count, key) => (object[key] ? count + 1 : count), 0);
+
+const getSimpleCount = (value, initial) => (isEqual(value, initial) ? 0 : 1);
+
+const getTitle = (state, initial) =>
+  (getChangedCount(state, initial) > 0
+    ? `More filters ⋅ ${getChangedCount(state, initial)}`
+    : 'More filters');
 
 export default class MoreFilters extends React.Component {
   initialValues = {
@@ -103,6 +136,8 @@ export default class MoreFilters extends React.Component {
         onApply={this.onApply}
         showSm
         showLg
+        isActive={getChangedCount(this.state, this.initialValues) > 0}
+        activeTitle={getTitle(this.state, this.initialValues)}
       >
         <MoreFiltersStyled>
           <Content>
@@ -118,6 +153,7 @@ export default class MoreFilters extends React.Component {
                 max={this.state.max}
                 min={this.state.min}
                 onChange={this.onPriceChange}
+                title="Price Range"
               />
             </Filter>
             <Filter>

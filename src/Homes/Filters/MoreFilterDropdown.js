@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import {
   BtnContainer,
   Filter,
@@ -33,9 +35,9 @@ const CancelButton = styled.button`
     margin-right: 8px;
     padding: 12px 8px;
     display: block;
-    font-family: 'Circular Air', 'Arial', 'Helvetica', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
+    font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
     color: #383838;
     background-color: transparent;
     border: none;
@@ -51,6 +53,7 @@ const Footer = styled.div`
     padding-top: 40px;
   }
   @media screen and (min-width: 991px) {
+    bottom: 8;
     padding-top: 32px;
     margin-bottom: 8px;
     justify-content: flex-end;
@@ -60,24 +63,16 @@ const Footer = styled.div`
 const DropDownWrapper = styled.div`
   position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   background-color: #fff;
   overflow: auto;
+  z-index: 5;
   @media screen and (min-width: 576px) {
     top: 136px;
   }
   @media screen and (min-width: 991px) {
-    right: calc(50% - 166px);
-    width: 733px;
-    background-color: #fff;
-    padding-left: 73px;
-    padding-top: 7px;
-
-    padding-right: 16px;
-    display: inline-block;
-    border-radius: 4px;
   }
 `;
 
@@ -95,20 +90,25 @@ export default function (props) {
       {props.isOpen && (
         <div>
           <Overflow onClick={props.onClick} />
+
           <DropDownWrapper>
-            <Header>
-              <Close onClick={props.onClick} />
-              <Title>All filters (0)</Title>
-              <Clear onClick={props.onClick}>Clear All</Clear>
-            </Header>
-            {props.children}
-            <Footer>
-              <CancelButton onClick={props.onClick}>Cancel</CancelButton>
-              <ConfirmButton onClick={props.onApply} isPrimary>
-                See homes
-              </ConfirmButton>
-              <MobileButton onClick={props.onApply}>See homes</MobileButton>
-            </Footer>
+            <Grid>
+              <Col xs={12} lg={8}>
+                <Header>
+                  <Close onClick={props.onClick} />
+                  <Title>All filters (0)</Title>
+                  <Clear onClick={props.onClick}>Clear All</Clear>
+                </Header>
+                {props.children}
+                <Footer>
+                  <CancelButton onClick={props.onClick}>Cancel</CancelButton>
+                  <ConfirmButton onClick={props.onApply} isPrimary>
+                    See homes
+                  </ConfirmButton>
+                  <MobileButton onClick={props.onApply}>See homes</MobileButton>
+                </Footer>
+              </Col>
+            </Grid>
           </DropDownWrapper>
         </div>
       )}
