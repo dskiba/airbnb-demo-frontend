@@ -28,8 +28,8 @@ const Button = styled.button`
 
 const Num = styled.span`
   width: 38px;
-  margin-left: 19px;
-  margin-right: 19px;
+  margin-left: 16px;
+  margin-right: 16px;
   text-align: center;
   font-size: 18px;
   line-height: 21px;

@@ -9,7 +9,10 @@ const Filter = styled(Option)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 326px;
+  @media screen and (min-width: 991px) {
+    width: 326px;
+    box-sizing: border-box;
+  }
 `;
 
 export default class InstantBook extends React.Component {

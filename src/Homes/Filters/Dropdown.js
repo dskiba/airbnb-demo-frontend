@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import closeIcon from './plus.svg';
 
-const BtnContainer = styled.div`
+export const BtnContainer = styled.div`
   display: inline-block;
 `;
 
-const Filter = styled.button`
+export const Filter = styled.button`
   margin-right: 12px;
   padding: 7px 16px;
-  display: ${props => (props.hideSm ? 'none' : 'inline-block')};
+  display: ${props => (props.showLg ? 'inline-block' : 'none')};
   background-color: ${props => (props.isOpen || props.isActive ? '#008489' : '#fff')};
   font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -19,6 +19,9 @@ const Filter = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  @media screen and (min-width: 991px) {
+    display: flex;
+  }
 `;
 
 const Footer = styled.div`
@@ -30,7 +33,10 @@ const Footer = styled.div`
   width: 100%;
   border-top: 1px solid rgba(72, 72, 72, 0.3);
   z-index: 111;
+
+  border-top: 1px solid #dbdbdb;
   @media screen and (min-width: 576px) {
+    border-top: none;
     bottom: 0;
     border: none;
     box-shadow: none;
@@ -39,7 +45,7 @@ const Footer = styled.div`
   }
 `;
 
-const Header = styled.header`
+export const Header = styled.header`
   padding: 16px 8px;
   display: flex;
   justify-content: space-between;
@@ -51,7 +57,7 @@ const Header = styled.header`
   }
 `;
 
-const Close = styled.button`
+export const Close = styled.button`
   width: 16px;
   height: 16px;
   background-image: url(${closeIcon});
@@ -61,14 +67,14 @@ const Close = styled.button`
   border: none;
 `;
 
-const Title = styled.p`
+export const Title = styled.p`
   margin: 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
 `;
 
-const Clear = styled.button`
+export const Clear = styled.button`
   border: none;
   background-color: #fff;
   font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -76,7 +82,7 @@ const Clear = styled.button`
   color: #0f7276;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   display: none;
   @media screen and (min-width: 576px) {
     display: block;
@@ -97,10 +103,12 @@ const Apply = Button.extend``;
 const Cancel = Button.extend``;
 const Reset = Button.extend``;
 
-const MobileButton = styled.button`
+export const MobileButton = styled.button`
   position: fixed;
   bottom: 8px;
-  padding: 12px 132px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 304px;
   font-family: 'Circular Air Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -138,7 +146,7 @@ const DropDownWrapper = styled.div`
   }
 `;
 
-const Overflow = styled.div`
+export const Overflow = styled.div`
   position: absolute;
   height: 100vh;
   top: 100%;
@@ -154,7 +162,8 @@ export default function (props) {
         onClick={props.onClick}
         isOpen={props.isOpen}
         isActive={props.isActive}
-        hideSm={props.hideSm}
+        showLg={props.showLg}
+        showSm={props.showSm}
       >
         {props.activeTitle && props.isActive ? props.activeTitle : props.name}
       </Filter>

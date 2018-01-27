@@ -1,44 +1,55 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import RadioButton from './RadioButton';
+import RadioButton from '../InstantBook/RadioButton';
 
 const Option = styled.div`
-  padding-top: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media screen and (min-width: 991px) {
     display: ${props => (props.hideLg ? 'none' : 'flex')};
-    box-sizing: border-box;
-
-    width: 326px;
   }
 `;
 
 const Name = styled.p`
-  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 21px;
   margin: 0;
   padding-bottom: 6px;
   flex-grow: 1;
-  font-weight: 200;
+  font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  user-select: none;
+  line-height: 19px;
   @media screen and (min-width: 576px) {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 23px;
   }
 `;
 
 const Annotation = styled.p`
   margin: 0;
+  padding-bottom: 6px;
   font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 26px;
-  padding-bottom: 16px;
+  line-height: 16px;
+  @media screen and (min-width: 576px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+`;
+
+const Link = styled.a`
+  padding: 4px 0;
+  color: #0f7276;
+  text-decoration: none;
+  font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  @media screen and (min-width: 576px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 `;
 
 const TextWrapper = styled.div``;
@@ -50,6 +61,7 @@ export default function (props) {
       <TextWrapper>
         <Name>{props.name}</Name>
         <Annotation>{props.annotation}</Annotation>
+        <Link>Learn more</Link>
       </TextWrapper>
       <RadioButton isChecked={props.isChecked} onChange={onChange} />
     </Option>

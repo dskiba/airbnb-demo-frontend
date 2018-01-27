@@ -7,7 +7,7 @@ import shared from './shared.svg';
 import Checkbox from './Checkbox';
 
 const Filter = styled.div`
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: 991px) {
     width: 326px;
     padding-top: 24px;
   }
@@ -15,11 +15,13 @@ const Filter = styled.div`
 
 const Row = styled.label`
   margin-bottom: 8px;
-  margin-left: 16px;
   margin-right: 16px;
   padding: 8px 0;
   display: flex;
   align-items: center;
+  @media screen and (min-width: 991px) {
+    margin-left: 16px;
+  }
 `;
 
 const Name = styled.p`
@@ -51,9 +53,19 @@ const TextWrapper = styled.div`
   flex-grow: 1;
 `;
 
+const Title = styled.h3`
+  font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  @media screen and (min-width: 991px) {
+    display: none;
+  }
+`;
+
 export default function (props) {
   return (
     <Filter>
+      <Title>Room type</Title>
       <Row>
         <Checkbox isChecked={props.roomtype.entire} handleChange={props.onChange} name="entire" />
         <TextWrapper>

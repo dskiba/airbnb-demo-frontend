@@ -90,6 +90,8 @@ export default class Guests extends React.Component {
         onApply={this.onApply}
         onReset={this.onReset}
         isCancelOrReset={isEqual(this.state.guests, this.initialValues.guests)}
+        showSm
+        showLg
       >
         <Filters>
           <Filter>

@@ -80,6 +80,8 @@ export default class Dates extends React.Component {
         onApply={this.onApply}
         onReset={this.onReset}
         isCancelOrReset={isEqual(this.state.dates, this.initialValues.dates)}
+        showSm
+        showLg
       >
         <Calendar>
           <Sm>

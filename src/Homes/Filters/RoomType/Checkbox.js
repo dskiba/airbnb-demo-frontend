@@ -17,6 +17,7 @@ const Checkbox = styled.div`
   border-radius: 4px;
   transition: all 0.3s;
   cursor: pointer;
+
   ${Input}:checked ~ & {
     background-color: #008489;
   }
@@ -33,7 +34,7 @@ export default function (props) {
   const onChange = () => props.handleChange({ [props.name]: !props.isChecked });
 
   return (
-    <Wrapper className={props.className}>
+    <Wrapper>
       <Input checked={props.isChecked} onChange={onChange} />
       <Checkbox onChange={onChange}>
         <Icon src={checkOn} />

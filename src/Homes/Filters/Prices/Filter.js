@@ -4,12 +4,21 @@ import Rheostat from 'rheostat';
 import Diagram from './Diagram';
 
 const Prices = styled.div`
-  @media screen and (min-width: 576px) {
     box-sizing: border-box;
-    width: 326px;
+    
     padding-top: 24px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+  @media screen and (min-width: 991px) {
+    width: 326px;
+  }
+`;
+
+const Title = styled.h3`
+  margin: 0;
+  margin-bottom: 23px;
+  @media screen and (min-width: 576px) {
   }
 `;
 
@@ -40,6 +49,7 @@ const Histogram = styled.div`
 export default function (props) {
   return (
     <Prices>
+      <Title>Price range</Title>
       <Name>
         ${props.prices.startPrice} — ${props.prices.endPrice}+
       </Name>

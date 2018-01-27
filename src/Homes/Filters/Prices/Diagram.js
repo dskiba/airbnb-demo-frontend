@@ -7,9 +7,12 @@ const Diagram = styled.div`
 `;
 
 const Line = styled.div`
-  width: 6px;
+  width: 10px;
   padding-top: ${props => props.height}px;
   background-color: #d8d8d8;
+  @media screen and (min-width: 991px) {
+    width: 6px;
+  }
 `;
 
 export default function () {

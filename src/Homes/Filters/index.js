@@ -7,6 +7,7 @@ import Guests from './Guests';
 import RoomType from './RoomType';
 import Price from './Prices';
 import InstantBook from './InstantBook';
+import MoreFilters from './MoreFilters/';
 
 const Filters = styled.div`
   margin-top: 80px;
@@ -33,6 +34,11 @@ export default class Filter extends React.Component {
       children: 0,
       infants: 0,
     },
+    roomsAndBeds: {
+      bedrooms: 0,
+      beds: 0,
+      bathrooms: 0,
+    },
     roomtype: {
       entire: false,
       privat: false,
@@ -43,6 +49,19 @@ export default class Filter extends React.Component {
       endPrice: 1000,
     },
     instantBook: false,
+    amenities: {
+      heating: false,
+      kitchen: false,
+      tv: false,
+      wifi: false,
+    },
+    facilities: {
+      elevator: false,
+      freeParking: false,
+      pool: false,
+      wheelchairAccessible: false,
+    },
+    superhost: false,
   };
 
   onApply = () => {
@@ -71,6 +90,7 @@ export default class Filter extends React.Component {
               isOpen={this.state.openedFilter === 'guests'}
               onClick={() => this.toggle('guests')}
               onApply={this.onApply}
+              showLg
             />
             <RoomType
               roomtype={this.state.roomtype}
@@ -89,6 +109,19 @@ export default class Filter extends React.Component {
               isOpen={this.state.openedFilter === 'instantBook'}
               onClick={() => this.toggle('instantBook')}
               onApply={this.onApply}
+            />
+            <MoreFilters
+              roomtype={this.state.roomtype}
+              prices={this.state.prices}
+              roomsAndBeds={this.state.roomsAndBeds}
+              amenities={this.state.amenities}
+              facilities={this.state.facilities}
+              instantBook={this.state.instantBook}
+              superhost={this.state.superhost}
+              isOpen={this.state.openedFilter === 'moreFilters'}
+              onClick={() => this.toggle('moreFilters')}
+              onApply={this.onApply}
+              showLg
             />
           </Row>
         </Grid>
