@@ -6,17 +6,18 @@ import Dates from './Dates';
 import Guests from './Guests';
 import RoomType from './RoomType';
 import Price from './Prices';
+import InstantBook from './InstantBook';
 
 const Filters = styled.div`
-  margin-top: 80.4px;
+  margin-top: 80px;
   padding: 12px 8px;
   right: 0;
   left: 0;
   position: fixed;
   width: 100%;
   background: #fff;
-  border-top: 0.5px solid rgba(72, 72, 72, 0.3);
-  border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
+  box-shadow: 0px 1px 0px rgba(72, 72, 72, 0.1);
+  border-top: 1px solid rgba(72, 72, 72, 0.1);
   z-index: 2;
 `;
 
@@ -41,6 +42,7 @@ export default class Filter extends React.Component {
       startPrice: 10,
       endPrice: 1000,
     },
+    instantBook: false,
   };
 
   onApply = () => {
@@ -80,6 +82,12 @@ export default class Filter extends React.Component {
               prices={this.state.prices}
               isOpen={this.state.openedFilter === 'prices'}
               onClick={() => this.toggle('prices')}
+              onApply={this.onApply}
+            />
+            <InstantBook
+              instantBook={this.state.instantBook}
+              isOpen={this.state.openedFilter === 'instantBook'}
+              onClick={() => this.toggle('instantBook')}
               onApply={this.onApply}
             />
           </Row>

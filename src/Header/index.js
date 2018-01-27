@@ -16,7 +16,7 @@ const Header = styled.header`
   left: 0;
   align-items: center;
   background: #fff;
-  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
+  box-shadow: 0px 1px 0px rgba(72, 72, 72, 0.1);
 
   z-index: 1;
 `;
