@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import arrow from "./pagenext.svg";
-import mapicon from "../../assets/mapIcon.svg";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from 'react-flexbox-grid';
+import arrow from './pagenext.svg';
+import mapicon from '../../assets/mapIcon.svg';
 
 const Pagination = styled.div`
   position: relative;
   margin-top: 45px;
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
@@ -24,11 +24,11 @@ const Page = styled.a`
   padding-bottom: 6px;
   padding-left: 13px;
   padding-right: 13px;
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 19px;
   font-size: 16px;
-  color: ${props => (props.active ? "#fff" : "#0F7276")};
-  background: ${props => (props.active ? "#008489" : "")};
+  color: ${props => (props.active ? '#fff' : '#0F7276')};
+  background: ${props => (props.active ? '#008489' : '')};
   text-decoration: none;
   vertical-align: middle;
   text-align: center;
@@ -57,14 +57,14 @@ const TotalPages = styled.span`
   display: inline-block;
   margin-top: 15px;
   margin-bottom: 24px;
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 19px;
   color: #383838;
 `;
 
 const FullPrices = styled.p`
-  font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Circular Air', Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #636363;
   margin-bottom: 24px;
   font-size: 16px;
@@ -92,27 +92,24 @@ const MapIcon = styled.button`
   }
 `;
 
-export default props => {
-  return (
-    <Pagination>
-      <Grid>
-        <Pages>
-          <Page href="" active>
-            1
-          </Page>
-          <Page href="">2</Page>
-          <Page href="">3</Page>
-          <Page>...</Page>
-          <Page href="">17</Page>
-          <NextPages href="" />
-        </Pages>
-        <TotalPages>1 – 18 of 300+ Rentals</TotalPages>
-        <FullPrices>
-          Enter dates to see full pricing. Additional fees apply. Taxes may be
-          added.
-        </FullPrices>
-        <MapIcon />
-      </Grid>
-    </Pagination>
-  );
-};
+export default () => (
+  <Pagination>
+    <Grid>
+      <Pages>
+        <Page href="" active>
+          1
+        </Page>
+        <Page href="">2</Page>
+        <Page href="">3</Page>
+        <Page>...</Page>
+        <Page href="">17</Page>
+        <NextPages href="" />
+      </Pages>
+      <TotalPages>1 – 18 of 300+ Rentals</TotalPages>
+      <FullPrices>
+        Enter dates to see full pricing. Additional fees apply. Taxes may be added.
+      </FullPrices>
+      <MapIcon />
+    </Grid>
+  </Pagination>
+);

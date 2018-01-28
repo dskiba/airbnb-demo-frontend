@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import arrow from "../assets/arrow.svg";
+import styled from 'styled-components';
+import arrow from '../assets/arrow.svg';
 
 export const Form = styled.form`
   margin-top: 16px;

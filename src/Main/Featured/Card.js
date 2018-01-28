@@ -1,8 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import { Link, Img, CardName } from "../../UI/index";
-import Stars from "../../UI/Stars/index";
+import React from 'react';
+import { Link, Img, CardName } from '../../UI';
 
 const City = CardName.extend`
   font-weight: bold;
@@ -14,13 +11,11 @@ const City = CardName.extend`
   }
 `;
 
-export default props => {
-  return (
-    <React.Fragment>
-      <Link to={props.link}>
-        <Img src={props.imgSrc} alt={props.imgAlt} />
-        <City>{props.city}</City>
-      </Link>
-    </React.Fragment>
-  );
-};
+export default props => (
+  <React.Fragment>
+    <Link to={props.link}>
+      <Img src={props.imgSrc} alt={props.imgAlt} />
+      <City>{props.city}</City>
+    </Link>
+  </React.Fragment>
+);

@@ -5,6 +5,7 @@
 
 .CalendarMonth_caption {
   color: #383838;
+  padding-top: 36px;
 }
 
 .DateInput_input {
@@ -31,4 +32,12 @@
 }
 .DayPickerNavigation_container {
   display: none;
+}
+
+.DayPicker_weekHeader {
+  top: 80px;
+}
+
+.CalendarMonth_table {
+  margin-top: 8px;
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import GoogleMapReact from "google-map-react";
+import React from 'react';
+import styled from 'styled-components';
+import GoogleMapReact from 'google-map-react';
 
 const Wrapper = styled.section`
   display: none;
@@ -12,7 +12,7 @@ const Wrapper = styled.section`
     right: 0;
     bottom: 0;
     width: 33%;
-    z-index: -1;
+    z-index: 3;
   }
 `;
 
@@ -26,7 +26,7 @@ const Place = styled.div`
 class GoogleMap extends React.Component {
   static defaultProps = {
     center: [48.239811, 16.375931],
-    zoom: 2
+    zoom: 2,
   };
 
   render() {
@@ -34,13 +34,13 @@ class GoogleMap extends React.Component {
       <Wrapper>
         <GoogleMapReact
           bootstrapURLKeys={{
-            key: process.env.REACT_APP_SECRET_CODE
+            key: process.env.REACT_APP_GOOGLEMAP_CODE,
           }}
           center={this.props.center}
           zoom={this.props.zoom}
         >
-          <Place lat={48.209619} lng={16.347093} text={"Airbnb"} />
-          <Place lat={55.751244} lng={55.751244} text={"Moscow"} />
+          <Place lat={48.209619} lng={16.347093} text="Airbnb" />
+          <Place lat={55.751244} lng={55.751244} text="Moscow" />
         </GoogleMapReact>
       </Wrapper>
     );

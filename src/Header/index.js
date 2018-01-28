@@ -1,27 +1,27 @@
-import React from "react";
-import styled from "styled-components";
-import magnifier from "../assets/magnifier.svg";
-import Navigation from "./Navigation";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import Logo from "./Logo";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row } from 'react-flexbox-grid';
+
+import magnifier from '../assets/magnifier.svg';
+import Navigation from './Navigation';
+import Logo from './Logo';
 
 const Header = styled.header`
   text-align: center;
   padding-top: 16px;
-
+  padding-bottom: 16px;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 3;
   align-items: center;
   background: #fff;
-  box-shadow: 0 0.5px 0 rgba(72, 72, 72, 0.3);
-  }
+  box-shadow: 0px 1px 0px rgba(72, 72, 72, 0.1);
+
+  z-index: 1;
 `;
 
 const SearchFrom = styled.form`
-  margin-bottom: 16px;
   margin-left: 51px;
   @media (min-width: 768px) {
     width: 432px;
@@ -57,11 +57,7 @@ export default props => (
       <Row start="xs">
         <Logo />
         <SearchFrom>
-          <SearchInput
-            type="text"
-            name="search"
-            placeholder={props.placeholder}
-          />
+          <SearchInput type="text" name="search" placeholder={props.placeholder} />
         </SearchFrom>
         <Navigation />
       </Row>

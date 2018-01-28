@@ -1,9 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Counter = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 8px;
+  @media screen and (min-width: 576px) {
+    margin-right: 0px;
+  }
 `;
 
 const Button = styled.button`
@@ -23,21 +27,24 @@ const Button = styled.button`
 `;
 
 const Num = styled.span`
-  margin-left: 19px;
-  margin-right: 19px;
+  width: 38px;
+  margin-left: 16px;
+  margin-right: 16px;
   text-align: center;
   font-size: 18px;
   line-height: 21px;
 `;
 
-export default function(props) {
+export default function (props) {
   return (
     <Counter>
-      <Button>
+      <Button disabled={props.value == props.min} onClick={() => props.onClick(props.name, -1)}>
         <span>-</span>
       </Button>
-      <Num>0</Num>
-      <Button>
+      <Num>
+        {props.value} {props.value > 1 ? '+' : ''}
+      </Num>
+      <Button onClick={() => props.onClick(props.name, +1)}>
         <span>+</span>
       </Button>
     </Counter>

@@ -1,8 +1,8 @@
-import React from "react";
-import { Link as RouteLink } from "react-router-dom";
-import styled from "styled-components";
-import arrow from "../assets/arrow.svg";
-import logo from "./logo.svg";
+import React from 'react';
+import { Link as RouteLink } from 'react-router-dom';
+import styled from 'styled-components';
+import arrow from '../assets/arrow.svg';
+import logo from './logo.svg';
 
 const Logo = styled.div`
   display: inline-block;

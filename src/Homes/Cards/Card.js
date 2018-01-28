@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import { Link, Img, CardName, CardPrice, Reviews } from "../../UI/index";
-import Stars from "../../UI/Stars/index";
+import React from 'react';
+import styled from 'styled-components';
+import { Link, Img, CardName, CardPrice, Reviews } from '../../UI';
+import Stars from '../../UI/Stars';
 
 const Title = CardName.extend`
   font-size: 15px;
@@ -20,8 +19,7 @@ const Price = CardPrice.extend`
 const Hosts = Reviews.extend``;
 
 const Description = styled.div`
-  font-family: "Circular Air Light", Helvetica Neue, Helvetica, Arial,
-    sans-serif;
+  font-family: 'Circular Air Light', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 18px;
   margin-top: 2px;
@@ -35,21 +33,19 @@ const CardImg = Img.extend`
   margin-top: 24px;
 `;
 
-export default props => {
-  return (
-    <React.Fragment>
-      <Link to={props.link}>
-        <CardImg src={props.imgSrc} alt={props.imgAlt} />
-        <Title>
-          <Price>${props.price}</Price>
-          {props.title}
-        </Title>
-      </Link>
-      <Description>
-        Entire house &#183; {props.beds} {props.beds > 1 ? " beds" : " bed"}
-      </Description>
-      <Stars />
-      <Hosts>{props.hosts} &#183; Superhost</Hosts>
-    </React.Fragment>
-  );
-};
+export default props => (
+  <React.Fragment>
+    <Link to={props.link}>
+      <CardImg src={props.imgSrc} alt={props.imgAlt} />
+      <Title>
+        <Price>${props.price}</Price>
+        {props.title}
+      </Title>
+    </Link>
+    <Description>
+      Entire house &#183; {props.beds} {props.beds > 1 ? ' beds' : ' bed'}
+    </Description>
+    <Stars />
+    <Hosts>{props.hosts} &#183; Superhost</Hosts>
+  </React.Fragment>
+);
