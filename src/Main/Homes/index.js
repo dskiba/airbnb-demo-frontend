@@ -8,11 +8,12 @@ import Card from './Card';
 import img1 from '../../Homes/Cards/1.png';
 import img2 from '../../Homes/Cards/2.png';
 import img3 from '../../Homes/Cards/3.png';
+import { HomesData } from '../../Homes/Cards/api';
 
 const Homes = styled.section`
   overflow: scroll;
   @media (min-width: 1024px) {
-    overflow: visible;
+    overflow: hide;
   }
 `;
 
@@ -24,53 +25,45 @@ const Link = styled(RouteLink)`
   text-decoration: none;
 `;
 
-export default () => (
-  <Homes>
-    <Row>
-      <Col xs={12} md={12} lg={12}>
-        <Link to="/Homes">
-          <Title>
-            Homes
-            <SeeAll to="/Homes">See all</SeeAll>
-          </Title>
-        </Link>
-      </Col>
-    </Row>
-    <Slider>
-      <Col xs={8} md={5} lg={4}>
-        <Card
-          link="#"
-          imgSrc={img1}
-          imgAlt="Nature"
-          price={82}
-          title="La Salentina, see, nature & relax"
-          beds="9"
-          hosts={97}
-        />
-      </Col>
-      <Col xs={8} md={5} lg={4}>
-        <Card
-          link="#"
-          imgSrc={img2}
-          imgAlt="Your private"
-          price={82}
-          title="Your private 3 bedr. riad and exclusi…"
-          beds="5"
-          hosts={161}
-        />
-      </Col>
-      <Col xs={8} md={5} lg={4}>
-        <Card
-          link="#"
-          imgSrc={img3}
-          imgAlt="Tropical"
-          price={200}
-          title="Dreamy Tropical Tree House"
-          beds="1"
-          hosts={364}
-        />
-      </Col>
-      <SlideNext />
-    </Slider>
-  </Homes>
-);
+export default class Cards extends React.Component {
+  state = { homes: [] };
+
+  async componentWillMount() {
+    const homes = await HomesData(0, 18);
+    this.setState({ homes });
+  }
+
+  render() {
+    return (
+      <Homes>
+        <Row>
+          <Col xs={12} md={12} lg={12}>
+            <Link to="/Homes">
+              <Title>
+                Homes
+                <SeeAll to="/Homes">See all</SeeAll>
+              </Title>
+            </Link>
+          </Col>
+        </Row>
+        <Slider>
+          {this.state.homes.map(home => (
+            <Col xs={8} md={5} lg={4}>
+              <Card
+                name={home.name}
+                image={home.image}
+                price={home.price}
+                type={home.kind}
+                beds={home.beds}
+                kind={home.kind}
+                reviews={home.reviews}
+                host={home.host}
+              />
+            </Col>
+          ))}
+          <SlideNext />
+        </Slider>
+      </Homes>
+    );
+  }
+}

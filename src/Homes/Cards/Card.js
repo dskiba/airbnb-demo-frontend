@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, Img, CardName, CardPrice, Reviews } from '../../UI';
+import { Img, CardName, CardPrice, Reviews } from '../../UI';
 import Stars from '../../UI/Stars';
 
 const Title = CardName.extend`
@@ -33,19 +33,28 @@ const CardImg = Img.extend`
   margin-top: 24px;
 `;
 
-export default props => (
+const Home = styled.a`
+  display: block;
+  text-decoration: none;
+`;
+
+export default ({
+  name, image, price, kind, beds, reviews, host,
+}) => (
   <React.Fragment>
-    <Link to={props.link}>
-      <CardImg src={props.imgSrc} alt={props.imgAlt} />
+    <Home href={name}>
+      <CardImg src={image} alt={name} />
       <Title>
-        <Price>${props.price}</Price>
-        {props.title}
+        <Price>${price}</Price>
+        {name}
       </Title>
-    </Link>
+    </Home>
     <Description>
-      Entire house &#183; {props.beds} {props.beds > 1 ? ' beds' : ' bed'}
+      {kind} &#183; {beds} {beds > 1 ? ' beds' : ' bed'}
     </Description>
     <Stars />
-    <Hosts>{props.hosts} &#183; Superhost</Hosts>
+    <Hosts>
+      {reviews} {host && '· Superhost'}
+    </Hosts>
   </React.Fragment>
 );
