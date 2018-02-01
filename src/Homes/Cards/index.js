@@ -4,7 +4,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import Pagination from './Paginator';
 import Card from './Card';
-import { HomesData } from './api';
+import homesData from './api';
 
 const Wrapper = styled.section`
   padding-top: 146px;
@@ -14,7 +14,7 @@ export default class Cards extends React.Component {
   state = { homes: [] };
 
   async componentWillMount() {
-    const homes = await HomesData(0, 6);
+    const homes = await homesData(0, 6);
     this.setState({ homes });
   }
 

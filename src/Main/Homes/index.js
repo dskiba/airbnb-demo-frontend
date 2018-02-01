@@ -8,7 +8,7 @@ import Card from './Card';
 import img1 from '../../Homes/Cards/1.png';
 import img2 from '../../Homes/Cards/2.png';
 import img3 from '../../Homes/Cards/3.png';
-import { HomesData } from '../../Homes/Cards/api';
+import homesData from '../../Homes/Cards/api';
 
 const Homes = styled.section`
   overflow: scroll;
@@ -29,7 +29,7 @@ export default class Cards extends React.Component {
   state = { homes: [] };
 
   async componentWillMount() {
-    const homes = await HomesData(0, 18);
+    const homes = await homesData(0, 18);
     this.setState({ homes });
   }
 
