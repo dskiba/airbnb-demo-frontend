@@ -5,9 +5,6 @@ import { Link as RouteLink } from 'react-router-dom';
 
 import { Title, Slider, SliderArrow, SeeAll } from '../../UI';
 import Card from './Card';
-import img1 from '../../Homes/Cards/1.png';
-import img2 from '../../Homes/Cards/2.png';
-import img3 from '../../Homes/Cards/3.png';
 import homesData from '../../Homes/Cards/api';
 
 const Homes = styled.section`
