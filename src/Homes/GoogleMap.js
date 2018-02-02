@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import GoogleMapReact from 'google-map-react';
+import homesData from './Cards/api';
 
 const Wrapper = styled.section`
   display: none;
@@ -23,11 +24,18 @@ const Place = styled.div`
   background-color: darkorange;
 `;
 
-class GoogleMap extends React.Component {
+export default class GoogleMap extends React.Component {
   static defaultProps = {
     center: [48.239811, 16.375931],
     zoom: 2,
   };
+
+  state = { homes: [] };
+
+  async componentWillMount() {
+    const homes = await homesData(0, 6);
+    this.setState({ homes });
+  }
 
   render() {
     return (
@@ -39,12 +47,9 @@ class GoogleMap extends React.Component {
           center={this.props.center}
           zoom={this.props.zoom}
         >
-          <Place lat={48.209619} lng={16.347093} text="Airbnb" />
-          <Place lat={55.751244} lng={55.751244} text="Moscow" />
+          {this.state.homes.map(home => <Place lat={home.lat} lng={home.lng} text={home.name} />)}
         </GoogleMapReact>
       </Wrapper>
     );
   }
 }
-
-export default GoogleMap;
