@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
 import { Title, Slider, SliderArrow } from '../../UI';
 import Card from './Card';
-import Paris from './Paris.png';
-import Miami from './Miami.png';
-import Tokyo from './Tokyo.png';
-import CapeTown from './Cape-town.png';
-import Seoul from './Seoul.png';
-import LosAngeles from './Los-Angeles.png';
+import Paris from './Paris.jpg';
+import Miami from './Miami.jpg';
+import Tokyo from './Tokyo.jpg';
+import CapeTown from './Cape-town.jpg';
+import Seoul from './Seoul.jpg';
+import LosAngeles from './Los-Angeles.jpg';
 
 const Featured = styled.section`
   overflow: scroll;
