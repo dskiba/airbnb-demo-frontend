@@ -26,8 +26,6 @@ const Description = styled.div`
 
 const CardImg = Img.extend`
   max-height: 242px;
-
-  margin-top: 24px;
 `;
 
 const Home = styled.a`

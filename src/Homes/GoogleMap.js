@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import GoogleMapReact from 'google-map-react';
-import homesData from './Cards/api';
+import getHomes from './Cards/api';
 
 const Wrapper = styled.section`
   display: none;
@@ -33,7 +33,7 @@ export default class GoogleMap extends React.Component {
   state = { homes: [] };
 
   async componentWillMount() {
-    const homes = await homesData(0, 6);
+    const homes = await getHomes(0, 6);
     this.setState({ homes });
   }
 

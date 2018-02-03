@@ -6,7 +6,7 @@ import 'react-placeholder/lib/reactPlaceholder.css';
 
 import Pagination from './Paginator';
 import Card from './Card';
-import homesData from './api';
+import getHomes from './api';
 
 const Wrapper = styled.section`
   padding-top: 146px;
@@ -16,7 +16,7 @@ export default class Cards extends React.Component {
   state = { homes: [], ready: false };
 
   async componentWillMount() {
-    const homes = await homesData(0, 6);
+    const homes = await getHomes(0, 6);
     this.setState({ homes, ready: true });
   }
 

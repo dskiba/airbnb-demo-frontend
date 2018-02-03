@@ -5,7 +5,7 @@ import { Link as RouteLink } from 'react-router-dom';
 
 import { Title, Slider, SliderArrow, SeeAll } from '../../UI';
 import Card from './Card';
-import homesData from '../../Homes/Cards/api';
+import getHomes from '../../Homes/Cards/api';
 
 const Homes = styled.section`
   overflow: scroll;
@@ -26,7 +26,7 @@ export default class Cards extends React.Component {
   state = { homes: [] };
 
   async componentWillMount() {
-    const homes = await homesData(0, 18);
+    const homes = await getHomes(0, 18);
     this.setState({ homes });
   }
 

@@ -3,7 +3,7 @@ const houseKind = {
   private_room: 'Private room',
 };
 
-export default function homesData(offset, limit) {
+export default function getHomes(offset, limit) {
   return fetch(`https://airbnb-demo-api.now.sh/v1/homes?offset=${offset}&limit=${limit}`)
     .then(res => res.json())
     .then(res =>
