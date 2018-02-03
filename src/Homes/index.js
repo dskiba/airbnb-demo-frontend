@@ -8,8 +8,6 @@ import Header from '../Header';
 import GoogleMap from './GoogleMap';
 import getHomes from './Cards/api';
 
-import ReactPlaceholder from 'react-placeholder';
-
 const Content = styled.main``;
 
 export default class Homes extends React.Component {

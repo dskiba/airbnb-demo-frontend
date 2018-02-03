@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Col } from 'react-flexbox-grid';
-
-import ReactPlaceholder from 'react-placeholder';
 import 'react-placeholder/lib/reactPlaceholder.css';
 import { Img, CardName, CardPrice, Reviews } from '../../UI';
 import Stars from '../../UI/Stars';
