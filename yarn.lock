@@ -6,6 +6,12 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@mapbox/point-geometry/-/point-geometry-0.1.0.tgz#8a83f9335c7860effa2eeeca254332aa0aeed8f2"
 
+"@trainline/react-skeletor@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@trainline/react-skeletor/-/react-skeletor-1.0.2.tgz#a5cab1482ae59b187cb4e60de905cdb552b15b06"
+  dependencies:
+    prop-types "^15.5.10"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -5426,6 +5432,12 @@ react-moment-proptypes@^1.5.0:
 react-onclickoutside@^6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.0.tgz#997a4d533114c9a0a104913638aa26afc084f75c"
+
+react-placeholder@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-placeholder/-/react-placeholder-2.0.0.tgz#5117b4758927dc5ae5fcbf62552ab98209f6666c"
+  dependencies:
+    prop-types "^15.6.0"
 
 react-portal@^4.1.2:
   version "4.1.2"

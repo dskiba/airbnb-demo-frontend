@@ -23,28 +23,18 @@ const Place = styled.div`
   background-color: darkorange;
 `;
 
-class GoogleMap extends React.Component {
-  static defaultProps = {
-    center: [48.239811, 16.375931],
-    zoom: 2,
-  };
-
-  render() {
-    return (
-      <Wrapper>
-        <GoogleMapReact
-          bootstrapURLKeys={{
-            key: process.env.REACT_APP_GOOGLEMAP_CODE,
-          }}
-          center={this.props.center}
-          zoom={this.props.zoom}
-        >
-          <Place lat={48.209619} lng={16.347093} text="Airbnb" />
-          <Place lat={55.751244} lng={55.751244} text="Moscow" />
-        </GoogleMapReact>
-      </Wrapper>
-    );
-  }
-}
+const GoogleMap = ({ homes }) => (
+  <Wrapper>
+    <GoogleMapReact
+      bootstrapURLKeys={{
+        key: process.env.REACT_APP_GOOGLEMAP_CODE,
+      }}
+      defaultCenter={{ lat: 59.95, lng: 30.33 }}
+      defaultZoom={2}
+    >
+      {homes.map(home => <Place lat={home.lat} lng={home.lng} text={home.name} />)}
+    </GoogleMapReact>
+  </Wrapper>
+);
 
 export default GoogleMap;
