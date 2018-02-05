@@ -5,7 +5,7 @@ import { Link as RouteLink } from 'react-router-dom';
 
 import { Title, Slider, SliderArrow, SeeAll } from '../../UI';
 import Card from './Card';
-import getHomes from '../../Homes/Cards/api';
+import getHomes from '../../Homes/api';
 
 const Homes = styled.section`
   overflow: scroll;
