@@ -4,10 +4,10 @@ import { Col } from 'react-flexbox-grid';
 
 import Card from './Card';
 import { Title, SliderArrow, SeeAll, Slider } from '../../UI';
-import img1 from './1.png';
-import img2 from './2.png';
-import img3 from './3.png';
-import img4 from './4.png';
+import img1 from './1.jpg';
+import img2 from './2.jpg';
+import img3 from './3.jpg';
+import img4 from './4.jpg';
 
 const Reservations = styled.section`
   overflow: scroll;

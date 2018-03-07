@@ -44,6 +44,11 @@ const activeFilters = [
   'superhost',
 ];
 
+const getObjectCount = object =>
+  Object.keys(object).reduce((count, key) => (object[key] ? count + 1 : count), 0);
+
+const getSimpleCount = (value, initial) => (isEqual(value, initial) ? 0 : 1);
+
 const getChangedCount = (state, initial) =>
   activeFilters.reduce(
     (count, key) =>
@@ -52,11 +57,6 @@ const getChangedCount = (state, initial) =>
         : count + getSimpleCount(state[key], initial[key])),
     0,
   );
-
-const getObjectCount = object =>
-  Object.keys(object).reduce((count, key) => (object[key] ? count + 1 : count), 0);
-
-const getSimpleCount = (value, initial) => (isEqual(value, initial) ? 0 : 1);
 
 const getTitle = (state, initial) =>
   (getChangedCount(state, initial) > 0
