@@ -17,8 +17,6 @@
         ]
       }
     ],
-    "react/prop-types": 0,
-    "jsx-a11y/anchor-is-valid": "off",
-    "jsx-a11y/href-no-hash": "off"
+    "react/prop-types": 0
   }
 }
