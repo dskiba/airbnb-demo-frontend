@@ -38,7 +38,7 @@
     "typescript-styled-plugin": "^0.2.2"
   },
   "now": {
-    "name": "airbnb-demo-frontend",
-    "alias": "dskiba-airbnb-demo-frontend.com"
+    "name": "airbnb-demo",
+    "alias": "dskiba-airbnb-demo"
   }
 }
