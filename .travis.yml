@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- "node"
+cache: yarn
+before_install:
+  - npm install -g now
+install:
+  - yarn install
+script: yarn build
+after_script: npm run alias
+env:
+global:
+    secure: dgKmquDwmqqCzLDRCxFDubJ8Chxb8rjJ1QIiZMzRrTK5t23SJEHaGb2O96Ul0QcKGNSD8m3SccykdGeSjim+PXQULYhYbAM4XCBxoUTogNXXi2yvzwuzL6atlChXj//dtARQ9Cqe2P4WFlBxe0XT2sOWPaYeKc+UPg0ZyFrZPshphsoipCpXCdbZHOZUflh9lm+Vnq+rOpvDNl9u0Sj6q8dJCH7NyRUDqsmSXfR2x7Bao4HrsuXcZQJN3+gRg23H/yJRzO+sHxE++phFNqnQRA5DzhxrGiGOlWvWQghWpLlSWk1tDSiRgIgWVLanRen8k0+NTpxZMz7QF80n98vdoznH8n5gOe6E/M7mhCHnuA2rfnSUex9CzN275bRIqOjDtNiVQbZJmmLHxh++hThI1bygI1c0LcZot6RUWf7axqqH8x9uXIBAp4jdTScT7hhwj5SzRcsasE+WZ2YTE1PTt+Q85xf0iXxWuKz2g62lpwFk2R5KSsY3d1bX1xvpxsWYh435i4wMidNFkeHsxhrb1F2rqMyW028g+q7HuAFUXMZgqhD01OtOcMNPfxCwJr/qTRxFGll5NnET7C1EgPSvE0HJXzZuwEqqnhRBBtxy1+j64LJ3gQauNyY6CJgD+MGIKeyK79OmS2Nt+yZdkdJIHDx1s+IUvorS6wSg4qO6acU=
+

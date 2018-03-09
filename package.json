@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@trainline/react-skeletor": "^1.0.2",
     "google-map-react": "^0.27.0",
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
@@ -13,6 +14,7 @@
     "react-flexbox-grid": "^2.0.0",
     "react-helmet": "^5.2.0",
     "react-onclickoutside": "^6.7.0",
+    "react-placeholder": "^2.0.0",
     "react-portal": "^4.1.2",
     "react-responsive": "^4.0.3",
     "react-router-dom": "^4.2.2",
@@ -24,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
+    "alias": "now alias --token=$NOW_TOKEN"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
@@ -33,5 +37,9 @@
     "eslint-plugin-react": "^7.4.0",
     "typescript": "^2.6.2",
     "typescript-styled-plugin": "^0.2.2"
+  },
+  "now": {
+    "name": "airbnb-demo-frontend",
+    "alias": "example.com"
   }
 }
